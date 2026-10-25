@@ -1,0 +1,6 @@
+{
+  "name": "Decorara - Curated Hampers & Artisanal Home Décor",
+  "description": "Boutique brand for thoughtfully curated artisanal gift hampers, festive wedding curations, handcrafted home décor, and AI gift finder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

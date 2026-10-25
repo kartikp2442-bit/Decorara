@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decorara — Thoughtfully Curated Gifts &amp; Home Décor</title>
+  <meta name="description" content="Boutique brand for thoughtfully curated artisanal gift hampers, festive wedding curations, handcrafted home décor, and AI gift finder." />
+  <meta property="og:title" content="Decorara — Thoughtfully Curated Gifts &amp; Home Décor" />
+  <meta property="og:description" content="Boutique brand for thoughtfully curated artisanal gift hampers, festive wedding curations, handcrafted home décor, and AI gift finder." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN for self-contained single-file browser execution -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#FAF6F0',
+            blush: '#E9CFC4',
+            terracotta: '#C0725A',
+            'terracotta-dark': '#A35842',
+            olive: '#3C4A3E',
+            'olive-dark': '#263328',
+            gold: '#B8975A',
+            'gold-light': '#FFDEA6',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --color-surface: #FAF6F0;
+      --color-blush: #E9CFC4;
+      --color-terracotta: #C0725A;
+      --color-olive: #3C4A3E;
+      --color-gold: #B8975A;
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
+    body {
+      background-color: #FAF6F0;
+      color: #263328;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-sans {
+      font-family: 'Inter', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF6F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D9CCC1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-surface font-sans text-olive-dark antialiased">
+
+  <!-- A) ANNOUNCEMENT BAR (Top) -->
+  <header class="fixed top-0 left-0 w-full z-50">
+    <div class="bg-olive-dark text-white py-2 px-4 text-center text-xs tracking-wider flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm text-gold-light">spa</span>
+      <span>Free artisanal gift wrapping on all hampers • Order on WhatsApp for quick delivery • Pan-India Courier</span>
+      <span class="material-symbols-outlined text-sm text-gold-light hidden sm:inline">local_shipping</span>
+    </div>
+
+    <!-- B) NAVBAR / HEADER (Sticky) -->
+    <div id="navbar" class="h-20 bg-surface/95 backdrop-blur-md border-b border-blush/30 shadow-sm transition-all duration-300">
+      <div class="max-w-[1400px] mx-auto h-full px-4 sm:px-8 md:px-12 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <a href="#home" class="flex flex-col group">
+          <div class="flex items-center gap-1.5">
+            <span class="font-serif text-2xl sm:text-3xl font-normal text-olive-dark group-hover:text-terracotta transition-colors">Decorara</span>
+            <span class="material-symbols-outlined text-gold text-xl">local_florist</span>
+          </div>
+          <span class="text-[10px] tracking-widest uppercase text-olive/70 -mt-1">Curated Hampers &amp; Décor</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-1 p-1.5 bg-[#F5EFEB]/80 rounded-full px-4 border border-blush/40 text-xs">
+          <a href="#home" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors font-medium">Home</a>
+          <a href="#gift-hampers" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors">Gift Hampers</a>
+          <a href="#home-decor" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors">Home Décor</a>
+          <a href="#ai-gift-finder" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors">AI Gift Finder</a>
+          <a href="#custom-hamper" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors">Custom Hamper</a>
+          <a href="#about" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors">About</a>
+          <a href="#testimonials" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors">Reviews</a>
+          <a href="#order-inquiry" class="px-3.5 py-1.5 rounded-full text-olive hover:text-terracotta transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Action Items -->
+        <div class="flex items-center gap-3">
+          <button onclick="openWhatsAppGeneral()" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-olive text-white hover:bg-olive-dark text-xs font-medium tracking-wide shadow-sm transition-all">
+            <span class="material-symbols-outlined text-base text-gold-light">chat</span>
+            <span>Order on WhatsApp</span>
+          </button>
+
+          <!-- Cart / Enquiry Icon -->
+          <button onclick="toggleCart(true)" class="relative p-2.5 rounded-full text-olive-dark hover:bg-blush/30 transition-all flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+            <span id="cart-badge" class="absolute top-1 right-1 w-5 h-5 rounded-full bg-terracotta text-white text-[10px] flex items-center justify-center font-bold shadow-sm">1</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-full text-olive-dark hover:bg-blush/30 transition-all">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-surface border-b border-blush/50 px-6 py-5 flex-col gap-3 shadow-xl">
+      <a href="#home" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">Home</a>
+      <a href="#gift-hampers" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">Gift Hampers</a>
+      <a href="#home-decor" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">Home Décor</a>
+      <a href="#ai-gift-finder" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">AI Gift Finder</a>
+      <a href="#custom-hamper" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">Custom Hamper Studio</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">About Us</a>
+      <a href="#testimonials" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">Reviews</a>
+      <a href="#order-inquiry" onclick="toggleMobileMenu()" class="font-serif text-lg py-1.5 border-b border-blush/30 text-olive-dark">Contact</a>
+      <button onclick="openWhatsAppGeneral(); toggleMobileMenu();" class="w-full py-3 rounded-full bg-terracotta text-white font-sans text-xs uppercase font-semibold tracking-wider flex items-center justify-center gap-2 mt-2">
+        <span class="material-symbols-outlined text-base">chat</span>
+        <span>Order on WhatsApp</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN BODY -->
+  <main class="pt-[110px]">
+
+    <!-- C) HERO SECTION -->
+    <section id="home" class="relative w-full overflow-hidden pb-16 pt-8 lg:pt-14">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center min-h-[660px]">
+          <!-- Left Editorial Narrative -->
+          <div class="lg:col-span-6 flex flex-col justify-center space-y-6 z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EBE3DB] w-fit text-olive-dark text-xs uppercase tracking-widest border border-blush/50">
+              <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+              <span>The Festive &amp; Milestone Collection 2026</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-olive-dark font-normal leading-[1.12] tracking-tight">
+              Thoughtfully Curated <br class="hidden sm:inline" />
+              <span class="italic font-normal text-terracotta">Gifts</span> &amp; Home Décor
+            </h1>
+
+            <p class="text-base sm:text-lg text-olive/80 max-w-xl leading-relaxed">
+              Gifts that make a house feel like home. Handcrafted, bespoke hampers and artisanal décor pieces for intimate weddings, Diwali reunions, housewarmings, and quiet milestones.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a href="#gift-hampers" class="px-7 py-3.5 bg-terracotta text-white rounded-full text-sm font-medium shadow-md hover:bg-terracotta-dark transition-all flex items-center gap-2">
+                <span>Shop Hampers</span>
+                <span class="material-symbols-outlined text-base">arrow_downward</span>
+              </a>
+              <a href="#ai-gift-finder" class="px-7 py-3.5 bg-[#F5EFEB] text-olive-dark hover:bg-[#EBE3DB] border border-blush rounded-full text-sm font-medium transition-all flex items-center gap-2">
+                <span class="material-symbols-outlined text-base text-gold">auto_awesome</span>
+                <span>Find Gift with AI</span>
+              </a>
+            </div>
+
+            <!-- Trust Badges Strip -->
+            <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div class="p-3.5 rounded-2xl bg-[#F5EFEB] border border-blush/30 flex flex-col gap-1">
+                <span class="material-symbols-outlined text-terracotta text-xl">featured_seasonal_and_gifts</span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-olive-dark">Custom Hampers</span>
+                <span class="text-[11px] text-olive/70">Bespoke Monograms</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#F5EFEB] border border-blush/30 flex flex-col gap-1">
+                <span class="material-symbols-outlined text-terracotta text-xl">auto_fix_high</span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-olive-dark">Artisanal Wrap</span>
+                <span class="text-[11px] text-olive/70">Velvet, Brass &amp; Wax</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#F5EFEB] border border-blush/30 flex flex-col gap-1">
+                <span class="material-symbols-outlined text-terracotta text-xl">local_shipping</span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-olive-dark">Pan-India Dispatch</span>
+                <span class="text-[11px] text-olive/70">Insured Safe Transit</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#F5EFEB] border border-blush/30 flex flex-col gap-1">
+                <span class="material-symbols-outlined text-terracotta text-xl">support_agent</span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-olive-dark">WhatsApp Support</span>
+                <span class="text-[11px] text-olive/70">Concierge Desk</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Overlapping Collage Visuals -->
+          <div class="lg:col-span-6 relative flex items-center justify-center">
+            <div class="w-full max-w-[540px] relative">
+              <div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-[#F5EFEB] border border-blush/40 group">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBExPKTdoFnO5ckKjVK0VRVT5vUTLpg81ykNVgM6hfyn24BQmC6_irIE6MWzmKGOYbrxtLj8QFu29edaLKQoDrizIQF2-X3IYnB9GWRH7ERw9jwuYofNvII4Ou1hXkqxWEQWhvjD9OJhi14uNPkNlTm4-BnLh_oY0WuGZimwelnl-bnZcbMwLjoz0GHADg8UxVG2syqoH-ZN2SGmfA-y3eYxceAOeZOTvAs79_LNIF6Ulqpu4QzZHVozQ" alt="The Rajbari Festive Trunk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-olive-dark/75 via-olive-dark/15 to-transparent flex items-end p-6 sm:p-8 text-white">
+                  <div>
+                    <span class="text-[11px] uppercase tracking-widest text-gold-light font-semibold">Featured Signature</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-normal mt-0.5">The Rajbari Festive Trunk</h3>
+                    <p class="text-xs sm:text-sm text-white/90 mt-1 max-w-sm">Hand-pressed brasswares with Kashmiri saffron preserves and sandalwood.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Inset Card -->
+              <div class="hidden sm:flex absolute -bottom-7 -left-7 w-56 p-3 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl flex-col gap-2 border border-blush/60">
+                <div class="w-full h-32 rounded-xl overflow-hidden bg-[#F5EFEB]">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGv5Y15tH2xA6C4M_l9XKlC7OY4io-JuOSUIc3zzHSzkMIvGXx5TKc766M0RncGAW-y8ijkhpD2t2NnnMNbYsRc0-_trDU3DGCGYrlfZewJ2vSliXttc8ElTgEgsWJCkS6Vh2YJxf5WI7gxbB3ve_j2ieimvxpiuNYMdJEpMeu3v4CRVYoxKBjVwnZG-xJDhS7NP3fV_bWlcbqU4eL4wqQ3N24U8RAcJ5uMgnBV369eCvS099Pq-mxng" alt="Moradabad Guild Brass" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex items-center justify-between px-1">
+                  <div>
+                    <span class="text-xs font-semibold text-olive-dark block">Handcrafted Brass</span>
+                    <p class="text-[11px] text-olive/70">Moradabad Guild</p>
+                  </div>
+                  <span class="font-serif text-base font-semibold text-gold">₹1,850</span>
+                </div>
+              </div>
+
+              <!-- Seal Badge -->
+              <div class="absolute -top-5 -right-3 w-24 h-24 rounded-full bg-olive-dark text-white p-2 flex flex-col items-center justify-center text-center shadow-xl border-2 border-gold/60">
+                <span class="material-symbols-outlined text-gold-light text-xl">verified</span>
+                <span class="text-[10px] uppercase tracking-wider font-bold mt-0.5">100% Artisan</span>
+                <span class="text-[9px] text-gold-light">Zero Synthetic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D) SHOP BY OCCASION -->
+    <section id="occasions" class="w-full py-16 bg-[#F5EFEB]/70 border-y border-blush/30">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Curations by Moment</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">Shop By Occasion</h2>
+          </div>
+          <p class="text-sm text-olive/80 max-w-md">Every celebration has its own cadence. Filter our craft collections by the milestone that calls for grace.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6" id="occasions-cards">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- E) FEATURED GIFT HAMPERS -->
+    <section id="gift-hampers" class="w-full py-16 sm:py-20">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Artisanal Signatures</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">Featured Gift Hampers</h2>
+          </div>
+          <!-- Filter chips -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="hampers-filter-chips">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" id="hampers-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- F) HOME DÉCOR COLLECTION -->
+    <section id="home-decor" class="w-full py-16 sm:py-20 bg-[#F5EFEB]/70 border-t border-blush/30">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Artisanal Living Spaces</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">Artisanal Home Décor</h2>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="decor-filter-chips">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" id="decor-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- G) AI GIFT FINDER (Key Feature) -->
+    <section id="ai-gift-finder" class="w-full py-16 sm:py-24 relative overflow-hidden">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 md:p-14 shadow-xl border border-blush/50 relative">
+          <div class="absolute -top-4 right-8 bg-olive-dark text-gold-light px-4 py-1.5 rounded-full text-xs font-semibold shadow-md flex items-center gap-1.5 border border-gold/40">
+            <span class="material-symbols-outlined text-sm text-gold">auto_awesome</span>
+            <span>Interactive AI Concierge</span>
+          </div>
+
+          <div class="max-w-2xl mx-auto text-center mb-10">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Zero Guesswork Gifting</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">AI Gift Finder Concierge</h2>
+            <p class="text-sm sm:text-base text-olive/80 mt-2">Share a few nuances about your recipient. Our intelligent stylist will harmonize the catalog to curate 3 tailor-fit curations in seconds.</p>
+
+            <div id="ai-progress-strip" class="flex items-center justify-center gap-3 sm:gap-4 mt-6">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <div class="max-w-2xl mx-auto" id="ai-wizard-container">
+            <!-- Steps 1-4 or Results injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- I) CUSTOM HAMPER BUILDER STUDIO -->
+    <section id="custom-hamper" class="w-full py-16 sm:py-24 bg-[#F5EFEB]/70 border-t border-blush/40">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Atelier Workshop</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">Custom Hamper Studio</h2>
+          <p class="text-sm sm:text-base text-olive/80 mt-2">Become the curator. Select a bespoke foundation, layer handpicked artisanal keepsakes, and preview your calligraphed deckle-edge note in real time.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <!-- Left studio controls (8 cols) -->
+          <div class="lg:col-span-8 flex flex-col gap-8">
+            <!-- Box picker -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-blush/50">
+              <div class="flex items-center justify-between mb-5">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-olive-dark text-white text-xs flex items-center justify-center font-bold">1</span>
+                  <h3 class="font-serif text-xl sm:text-2xl text-olive-dark">Choose Your Base Box</h3>
+                </div>
+                <span class="text-xs text-olive/70">Includes silk ribbon &amp; botanicals</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="studio-boxes-grid"></div>
+            </div>
+
+            <!-- Items picker -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-blush/50">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-5">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-olive-dark text-white text-xs flex items-center justify-center font-bold">2</span>
+                  <h3 class="font-serif text-xl sm:text-2xl text-olive-dark">Add Artisanal Treasures</h3>
+                </div>
+                <span id="studio-counter-label" class="text-xs font-semibold text-terracotta">3 of 5 selected (minimum 3)</span>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5" id="studio-treasures-grid"></div>
+            </div>
+
+            <!-- Note picker -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-blush/50">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-6 h-6 rounded-full bg-olive-dark text-white text-xs flex items-center justify-center font-bold">3</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-olive-dark">Complimentary Handwritten Note</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-olive/75 mb-4">Inscribed by hand on cotton deckle-edge paper and sealed with warm terracotta wax and botanical sprig.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <textarea id="studio-note-input" rows="4" oninput="updateCardPreview(this.value)" class="w-full p-3.5 bg-surface border border-blush rounded-2xl text-xs sm:text-sm text-olive-dark placeholder:text-olive/50 focus:outline-none focus:ring-1 focus:ring-terracotta resize-none">May your home always overflow with warmth, light, and fragrant memories. With all our love.</textarea>
+                <div class="p-4 rounded-2xl bg-surface border border-amber-200/60 shadow-inner flex flex-col justify-between min-h-[140px]">
+                  <div class="flex items-center justify-between">
+                    <span class="font-serif text-xs italic text-olive-dark">Decorara Calligraphy Desk</span>
+                    <span class="w-3.5 h-3.5 rounded-full bg-terracotta shadow-xs"></span>
+                  </div>
+                  <p id="studio-note-preview" class="font-serif text-sm italic text-olive-dark leading-relaxed my-2 line-clamp-3">
+                    "May your home always overflow with warmth, light, and fragrant memories. With all our love."
+                  </p>
+                  <span class="text-[10px] uppercase tracking-wider text-olive/60">Gold Foil Crested Card • Hand-sealed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right studio tray (4 cols) -->
+          <div class="lg:col-span-4">
+            <div class="sticky top-28 bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-blush/60 flex flex-col gap-5">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-terracotta font-bold">Curator Tray</span>
+                <h3 class="font-serif text-2xl text-olive-dark mt-0.5">Your Custom Trunk</h3>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-surface border border-blush/50 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] uppercase tracking-wider text-olive/70">Selected Base Box</span>
+                  <p id="tray-box-title" class="text-sm font-semibold text-olive-dark">Royal Emerald Velvet Box</p>
+                </div>
+                <span id="tray-box-price" class="font-serif text-base font-semibold text-olive-dark">₹850</span>
+              </div>
+
+              <div>
+                <span class="text-xs font-semibold text-olive-dark mb-2 block">Selected Treasures (<span id="tray-item-count">3</span>)</span>
+                <div class="flex flex-col gap-2 max-h-52 overflow-y-auto pr-1" id="tray-items-list"></div>
+              </div>
+
+              <hr class="border-surface" />
+
+              <div class="flex flex-col gap-2 text-xs text-olive/80">
+                <div class="flex items-center justify-between">
+                  <span>Artisanal Box Base</span>
+                  <span id="tray-box-subtotal" class="text-olive-dark">₹850</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span>Curated Treasures Subtotal</span>
+                  <span id="tray-items-subtotal" class="text-olive-dark">₹1,660</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span>Handwritten Deckle Card</span>
+                  <span class="text-gold font-semibold">Free (₹250 value)</span>
+                </div>
+                <div class="flex items-baseline justify-between pt-2 border-t border-surface">
+                  <span class="font-serif text-lg text-olive-dark font-medium">Hamper Total</span>
+                  <span id="tray-grand-total" class="font-serif text-2xl text-olive-dark font-semibold">₹2,510</span>
+                </div>
+              </div>
+
+              <button onclick="sendCustomHamperWhatsApp()" class="w-full py-3.5 bg-terracotta hover:bg-terracotta-dark text-white rounded-full text-xs font-semibold tracking-wider uppercase shadow-md transition-all flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-base">send</span>
+                <span>Send Hamper to WhatsApp</span>
+              </button>
+              <p class="text-[11px] text-center text-olive/70">Direct concierge booking. We will send photo proofs of your assembled trunk before invoicing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- J) PLACE ORDER SECTION & K) WHATSAPP ENQUIRY BANNER -->
+    <section id="order-inquiry" class="w-full py-16 sm:py-24">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <!-- 4-step ordering guide -->
+        <div class="mb-16">
+          <div class="text-center max-w-xl mx-auto mb-10">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Unhurried Experience</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">How Ordering Works</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="p-6 rounded-3xl bg-[#F5EFEB] border border-blush/40 flex flex-col gap-2.5">
+              <span class="font-serif text-3xl text-terracotta font-normal">01</span>
+              <h4 class="font-serif text-xl text-olive-dark">Choose Your Gifts</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Select curated signatures, individual artisanal décor pieces, or build your own bespoke trunk.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-[#F5EFEB] border border-blush/40 flex flex-col gap-2.5">
+              <span class="font-serif text-3xl text-terracotta font-normal">02</span>
+              <h4 class="font-serif text-xl text-olive-dark">Share Details</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Provide recipient address, delivery date, calligraphy card sentiment, and packaging ribbon tone.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-[#F5EFEB] border border-blush/40 flex flex-col gap-2.5">
+              <span class="font-serif text-3xl text-terracotta font-normal">03</span>
+              <h4 class="font-serif text-xl text-olive-dark">Confirm &amp; Pay</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Our human concierge shares live photos of your packed hamper and an encrypted Razorpay/UPI link.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-[#F5EFEB] border border-blush/40 flex flex-col gap-2.5">
+              <span class="font-serif text-3xl text-terracotta font-normal">04</span>
+              <h4 class="font-serif text-xl text-olive-dark">We Deliver</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Dispatched with insured courier in impact-proof wooden frames with tracking right to their doorstep.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center bg-white rounded-3xl p-6 sm:p-10 md:p-14 shadow-xl border border-blush/50">
+          <div class="lg:col-span-5 flex flex-col gap-6">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Direct Concierge Booking</span>
+              <h3 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1 leading-snug">Let Us Craft Your Milestone Surprise</h3>
+              <p class="text-sm sm:text-base text-olive/80 leading-relaxed mt-3">Fill in your desired gift curations. Submitting this form instantly prepares a formatted WhatsApp dispatch brief so our head stylist can assist immediately.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-surface border border-blush/60 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-olive-dark text-white flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-gold-light text-2xl">call</span>
+              </div>
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-olive/70 block">Prefer to talk to a human?</span>
+                <p class="font-serif text-lg text-olive-dark font-medium">+91 99999 99999</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form elements -->
+          <div class="lg:col-span-7">
+            <form onsubmit="handleOrderSubmit(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">Your Full Name *</label>
+                <input id="form-name" type="text" required placeholder="e.g. Rohini Sen" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">WhatsApp Phone Number *</label>
+                <input id="form-phone" type="tel" required placeholder="e.g. 9876543210" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">Email Address (Optional)</label>
+                <input id="form-email" type="email" placeholder="e.g. rohini@example.com" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">Milestone Occasion</label>
+                <select id="form-occasion" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta">
+                  <option value="Diwali & Festive">Diwali &amp; Festive</option>
+                  <option value="Wedding / Trousseau">Wedding / Trousseau</option>
+                  <option value="Housewarming">Housewarming</option>
+                  <option value="Birthday Celebration">Birthday Celebration</option>
+                  <option value="Anniversary">Anniversary</option>
+                  <option value="Corporate Bulk (15+ Units)">Corporate Bulk (15+ Units)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">Desired Product / Hamper</label>
+                <input id="form-product" type="text" placeholder="e.g. Royal Diwali Hamper or Custom Box" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">Quantity</label>
+                <input id="form-qty" type="text" value="1" placeholder="e.g. 1 hamper" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">Estimated Budget (INR)</label>
+                <input id="form-budget" type="text" placeholder="e.g. Under ₹2,500 or ₹3,500+" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-olive-dark mb-1">Preferred Delivery Date</label>
+                <input id="form-date" type="date" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-medium text-olive-dark mb-1">Delivery Address &amp; Pincode</label>
+                <input id="form-address" type="text" placeholder="e.g. Indiranagar, Bengaluru - 560038" class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-medium text-olive-dark mb-1">Gift Message / Customization Notes</label>
+                <textarea id="form-message" rows="3" placeholder="Include custom card sentiment, specific ribbon shade..." class="w-full px-4 py-2.5 rounded-xl bg-surface text-olive-dark text-xs sm:text-sm border border-blush/70 focus:outline-none focus:ring-1 focus:ring-terracotta resize-none"></textarea>
+              </div>
+              <div class="sm:col-span-2 pt-2">
+                <button type="submit" class="w-full py-3.5 bg-terracotta hover:bg-terracotta-dark text-white rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-md transition-all flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-base">chat</span>
+                  <span>Send Milestone Order to WhatsApp Concierge</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- K) WhatsApp Enquiry Banner -->
+        <div class="mt-16 rounded-3xl bg-olive-dark text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl border border-gold/40 relative overflow-hidden">
+          <div class="max-w-xl text-center md:text-left z-10">
+            <span class="text-xs uppercase tracking-widest text-gold-light font-bold">Instant Hospitality Desk</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-normal mt-1 leading-snug">Have a question or want a custom hamper? Chat with us on WhatsApp.</h3>
+            <p class="text-xs sm:text-sm text-white/80 mt-2 leading-relaxed">Our Bangalore atelier team responds within minutes to help coordinate monograms, same-day dispatch, or wedding favors.</p>
+          </div>
+          <div class="z-10 shrink-0">
+            <button onclick="openWhatsAppGeneral()" class="px-8 py-4 bg-[#25D366] hover:bg-[#20ba59] text-white text-sm font-bold tracking-wide rounded-full shadow-lg transition-all flex items-center gap-2.5 hover:scale-105">
+              <span class="material-symbols-outlined text-xl">chat</span>
+              <span>Chat on WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- L) WHY CHOOSE DECORARA & M) CUSTOMER REVIEWS -->
+    <section id="testimonials" class="w-full py-16 sm:py-24 bg-[#F5EFEB]/70 border-t border-blush/30">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="mb-20">
+          <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">The Decorara Standard</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">Why Choose Decorara</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 rounded-3xl bg-white border border-blush/40 flex flex-col gap-3 shadow-xs">
+              <span class="material-symbols-outlined text-terracotta text-3xl">volunteer_activism</span>
+              <h4 class="font-serif text-xl text-olive-dark">Handpicked Products</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Direct partnerships with master metal smiths of Moradabad, Khurja potters, and GI-certified clusters without middlemen.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-white border border-blush/40 flex flex-col gap-3 shadow-xs">
+              <span class="material-symbols-outlined text-terracotta text-3xl">featured_seasonal_and_gifts</span>
+              <h4 class="font-serif text-xl text-olive-dark">Custom Packaging</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Signature botanical wrapping, custom gold embossed monograms, raw tussar ribbons, and real melted beeswax stamps.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-white border border-blush/40 flex flex-col gap-3 shadow-xs">
+              <span class="material-symbols-outlined text-terracotta text-3xl">local_shipping</span>
+              <h4 class="font-serif text-xl text-olive-dark">On-time Delivery</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Safe, insulated transit across 19,000+ Indian pincodes with real-time transit tracking and zero-hassle breakage replacements.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-white border border-blush/40 flex flex-col gap-3 shadow-xs">
+              <span class="material-symbols-outlined text-terracotta text-3xl">support_agent</span>
+              <h4 class="font-serif text-xl text-olive-dark">Dedicated Support</h4>
+              <p class="text-xs sm:text-sm text-olive/80 leading-relaxed">Never converse with automated robotic menus. Our human styling team personally answers your WhatsApp messages in real time.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div>
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Patron Praise</span>
+              <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">Customer Reviews</h2>
+            </div>
+            <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-blush/50">
+              <span class="text-gold">★★★★★</span>
+              <span class="text-xs font-semibold text-olive-dark">4.9 / 5.0 Rating Across 1,200+ Dispatches</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="reviews-grid"></div>
+          <p class="text-[11px] text-center text-olive/60 mt-6 italic">* Sample verified reviews reflecting representative customer feedback.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- N) ABOUT US STORY & O) FAQ ACCORDION -->
+    <section id="about" class="w-full py-16 sm:py-24 bg-surface">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+          <!-- Story (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Generational Craft</span>
+              <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1 leading-snug">Modern Luxury Rooted in Craft</h2>
+              <p class="text-sm sm:text-base text-olive/80 mt-4 leading-relaxed">Decorara began with a single conviction: celebratory gifts shouldn't feel disposable or generic. We bridge multi-generational Indian metalworkers, Khurja potters, and organic tea gardens with contemporary editorial restraint.</p>
+              <p class="text-sm sm:text-base text-olive/80 mt-3 leading-relaxed">Every brass vessel is hammered with deliberate human touch; every box is swathed in raw cotton textures, deckle-edge calligraphy, and warm hospitality.</p>
+              <div class="w-full h-48 rounded-2xl overflow-hidden mt-6 bg-[#EBE3DB] border border-blush/50">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLQLfmifX_I2pEZPU89QTut8tZjmsYuUiHCYUCnOfjVbcjW2gPyljEPHq5ulhZS-rBh9nz9vrtyCPdY2q7GLY87hgY_9A-3VE9eSIVDRSLvw79rI3hCVdj-Aelu0u_c4hv3j0cOf0fa9cEP8yn415reQVWX8YhRjlQf1H8kcKuh2ETyOxQLJsnLugX7r3KZq5BOlFLtqgx4DTSY9dSNd6a9uXNlAfem7r1G2pWbp35k3GjIltm6ihIOA" alt="Decorara atelier" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-3 pt-8">
+              <div class="p-4 rounded-2xl bg-[#F5EFEB] border border-blush/40 text-center">
+                <span class="font-serif text-2xl sm:text-3xl text-terracotta font-normal block">1,000+</span>
+                <span class="text-[11px] text-olive/70 block mt-0.5">Hampers Dispatched</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#F5EFEB] border border-blush/40 text-center">
+                <span class="font-serif text-2xl sm:text-3xl text-terracotta font-normal block">150+</span>
+                <span class="text-[11px] text-olive/70 block mt-0.5">Village Artisans</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#F5EFEB] border border-blush/40 text-center">
+                <span class="font-serif text-2xl sm:text-3xl text-terracotta font-normal block">4.9★</span>
+                <span class="text-[11px] text-olive/70 block mt-0.5">Patron Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ (7 cols) -->
+          <div id="faq" class="lg:col-span-7 flex flex-col gap-3">
+            <div class="mb-3">
+              <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Transparent Hospitality</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-normal text-olive-dark mt-0.5">Frequently Asked Inquiries</h3>
+            </div>
+            <div class="flex flex-col gap-3" id="faq-accordion-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- P) INSTAGRAM GALLERY & Q) NEWSLETTER & R) FOOTER -->
+    <section class="w-full py-16 sm:py-24 bg-[#F5EFEB]/70 border-t border-blush/40">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Follow Our Journal</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-olive-dark mt-1">@decorara.living</h2>
+          <p class="text-xs sm:text-sm text-olive/70 mt-1.5">Glimpses into our Bangalore atelier, artisan brass workshops, and unboxing moments.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mb-16" id="instagram-grid"></div>
+
+        <!-- Newsletter -->
+        <div class="rounded-3xl bg-olive-dark text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl border border-gold/40">
+          <div class="max-w-xl text-center md:text-left">
+            <span class="text-xs uppercase tracking-widest text-gold-light font-bold">Limited Privilege</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-normal mt-1 leading-snug">Enjoy ₹500 Off Your First Milestone Hamper</h3>
+            <p class="text-xs sm:text-sm text-white/85 mt-2 leading-relaxed">Subscribe to our seasonal gazette for complimentary calligraphy upgrades, festive codes, and private artisan invitations.</p>
+          </div>
+          <form onsubmit="event.preventDefault(); alert('Thank you! Welcome coupon WELCOME500 has been activated for your profile.');" class="flex flex-col sm:flex-row items-center gap-2.5">
+            <input type="email" required placeholder="Enter your email" class="w-full sm:w-72 px-5 py-3 rounded-full bg-white text-olive-dark text-xs placeholder:text-olive/50 focus:outline-none" />
+            <button type="submit" class="w-full sm:w-auto px-7 py-3 rounded-full bg-terracotta hover:bg-terracotta-dark text-white text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap shadow-md">
+              Claim Offer
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-olive-dark text-white pt-16 pb-12 border-t border-olive">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-olive">
+          <div class="lg:col-span-4 flex flex-col gap-3">
+            <div class="flex items-center gap-2">
+              <span class="font-serif text-3xl font-normal text-white">Decorara</span>
+              <span class="material-symbols-outlined text-gold-light text-2xl">local_florist</span>
+            </div>
+            <p class="font-serif text-sm italic text-gold-light">"Gifts that make a house feel like home."</p>
+            <p class="text-xs text-white/75 max-w-sm pt-2 leading-relaxed">Harmonizing generational Indian craftsmanship with contemporary restraint. Every hamper is hand-assembled with rare botanical preserves, raw terracotta, and hand-beaten brass keepsakes.</p>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-3 text-xs text-white/75">
+            <h4 class="font-serif text-lg text-white">Curations</h4>
+            <a href="#gift-hampers" class="hover:text-gold-light">Festive Hampers</a>
+            <a href="#gift-hampers" class="hover:text-gold-light">Housewarming Trays</a>
+            <a href="#gift-hampers" class="hover:text-gold-light">Wedding Keepsakes</a>
+            <a href="#home-decor" class="hover:text-gold-light">Brass Tableware</a>
+            <a href="#home-decor" class="hover:text-gold-light">Terracotta Vessels</a>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-3 text-xs text-white/75">
+            <h4 class="font-serif text-lg text-white">Bespoke</h4>
+            <a href="#custom-hamper" class="hover:text-gold-light">Custom Hamper Studio</a>
+            <a href="#ai-gift-finder" class="hover:text-gold-light">AI Gift Finder</a>
+            <a href="#order-inquiry" class="hover:text-gold-light">Corporate Suiting</a>
+            <a href="#testimonials" class="hover:text-gold-light">Patron Stories</a>
+            <a href="#faq" class="hover:text-gold-light">Delivery FAQs</a>
+          </div>
+          <div class="lg:col-span-4 flex flex-col gap-3 text-xs text-white/75">
+            <h4 class="font-serif text-lg text-white">Private Concierge</h4>
+            <p>Phone: +91 99999 99999 • concierge@decorara.com</p>
+            <p>Atelier: Indiranagar 100ft Road, Bengaluru - 560038, India</p>
+            <p class="pt-2 text-gold-light">Monday – Saturday: 10:00 AM – 8:00 PM IST</p>
+          </div>
+        </div>
+        <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/70">
+          <p>© 2026 Decorara Lifestyle Living Pvt. Ltd. All rights reserved.</p>
+          <div class="flex items-center gap-4">
+            <span>SSL Encrypted Checkout</span>
+            <span>Razorpay • UPI • Amex</span>
+            <span>Damage-Free Transit Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- QUICK VIEW MODAL -->
+  <div id="quick-view-modal" class="fixed inset-0 z-50 bg-olive-dark/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative flex flex-col md:flex-row gap-6 sm:gap-8 border border-blush/50">
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-surface hover:bg-blush/40 flex items-center justify-center text-olive/70 hover:text-olive-dark">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+      <div class="w-full md:w-1/2 aspect-square rounded-2xl overflow-hidden bg-[#F5EFEB] shrink-0">
+        <img id="modal-img" src="" alt="Product" class="w-full h-full object-cover" />
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col justify-between">
+        <div>
+          <span id="modal-craft" class="text-xs text-terracotta font-semibold uppercase tracking-wider mb-1 block">Artisan Craft</span>
+          <h3 id="modal-title" class="font-serif text-2xl sm:text-3xl text-olive-dark leading-tight mt-1">Product Title</h3>
+          <span id="modal-price" class="font-serif text-2xl text-olive-dark font-normal block my-3">₹1,850</span>
+          <p id="modal-desc" class="text-xs sm:text-sm text-olive/80 leading-relaxed">Description goes here.</p>
+        </div>
+        <div class="pt-6 flex flex-col gap-2.5 border-t border-surface mt-4">
+          <button id="modal-add-btn" class="w-full py-2.5 rounded-xl bg-surface hover:bg-blush/40 text-olive-dark border border-blush/60 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-base">shopping_bag</span>
+            <span>Add to Cart</span>
+          </button>
+          <button id="modal-wa-btn" class="w-full py-2.5 rounded-xl bg-terracotta hover:bg-terracotta-dark text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Inquire on WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE-OVER ENQUIRY CART DRAWER -->
+  <div id="cart-backdrop" onclick="toggleCart(false)" class="fixed inset-0 z-50 bg-olive-dark/50 backdrop-blur-xs hidden transition-opacity"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between border-l border-blush/50">
+    <div class="p-6 flex items-center justify-between border-b border-[#F5EFEB]">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-terracotta text-2xl">shopping_bag</span>
+        <h3 class="font-serif text-xl sm:text-2xl text-olive-dark">Your Curation Cart</h3>
+      </div>
+      <button onclick="toggleCart(false)" class="p-1 rounded-full text-olive/70 hover:text-olive-dark">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+    <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 flex flex-col gap-4"></div>
+    <div class="p-6 bg-surface border-t border-blush/50 flex flex-col gap-3.5">
+      <div class="flex items-baseline justify-between">
+        <span class="text-xs uppercase tracking-wider text-olive/70">Estimated Subtotal</span>
+        <span id="cart-subtotal" class="font-serif text-2xl text-olive-dark font-semibold">₹0</span>
+      </div>
+      <p class="text-[11px] text-olive/70">Free artisanal wrapping &amp; deckle wax seal card included.</p>
+      <button onclick="checkoutCartViaWhatsApp()" class="w-full py-3.5 bg-terracotta hover:bg-terracotta-dark text-white rounded-full text-xs font-semibold tracking-wider uppercase shadow-md flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined text-base">chat</span>
+        <span>Send Enquiry on WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- H) AI CHAT ASSISTANT (Bottom-Left Widget) -->
+  <div class="fixed bottom-6 left-4 sm:left-8 z-40">
+    <button onclick="toggleChat(true)" id="chat-bubble-btn" class="flex items-center gap-2.5 bg-olive-dark hover:bg-olive text-white px-5 py-3.5 rounded-full shadow-2xl transition-all hover:scale-105 border border-gold/40">
+      <span class="material-symbols-outlined text-gold-light text-xl">auto_awesome</span>
+      <span class="text-xs sm:text-sm font-medium">AI Gifting Stylist</span>
+    </button>
+  </div>
+
+  <aside id="chat-panel" class="fixed bottom-6 left-4 sm:left-8 w-[calc(100vw-32px)] sm:w-96 bg-white rounded-3xl shadow-2xl border border-blush/70 z-50 hidden flex-col overflow-hidden">
+    <div class="p-4 bg-olive-dark text-white flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-olive flex items-center justify-center text-gold-light">
+          <span class="material-symbols-outlined text-base">smart_toy</span>
+        </div>
+        <div>
+          <span class="font-serif text-sm font-medium block">Decorara Concierge AI</span>
+          <span class="text-[10px] text-gold-light flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online • Instant Gifting Help
+          </span>
+        </div>
+      </div>
+      <button onclick="toggleChat(false)" class="text-white/70 hover:text-white p-1">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+    <div id="chat-messages" class="p-4 h-72 overflow-y-auto flex flex-col gap-3 text-xs bg-surface">
+      <div class="p-3 rounded-2xl rounded-tl-none bg-white text-olive-dark max-w-[85%] border border-blush/50 leading-relaxed shadow-2xs">
+        Namaste! I'm Decorara's gifting assistant. Looking for a hamper or décor idea for an upcoming milestone?
+      </div>
+    </div>
+    <div class="p-2 bg-[#F5EFEB] flex items-center gap-1.5 overflow-x-auto scrollbar-none border-t border-blush/30">
+      <button onclick="sendChatMessage('What are standard delivery timelines across India?')" class="px-3 py-1.5 bg-white rounded-full whitespace-nowrap text-[11px] font-medium text-olive-dark border border-blush/40 shrink-0">Delivery info</button>
+      <button onclick="sendChatMessage('Can I customize the items or ribbon in a hamper?')" class="px-3 py-1.5 bg-white rounded-full whitespace-nowrap text-[11px] font-medium text-olive-dark border border-blush/40 shrink-0">Customise box</button>
+      <button onclick="sendChatMessage('I want to talk to a human stylist on WhatsApp')" class="px-3 py-1.5 bg-white rounded-full whitespace-nowrap text-[11px] font-medium text-terracotta border border-blush/40 shrink-0">Talk to Human</button>
+    </div>
+    <div class="p-2.5 bg-white border-t border-blush/40 flex items-center gap-2">
+      <input id="chat-input" type="text" onkeydown="if(event.key==='Enter') sendChatMessage()" placeholder="Ask for suggestions, delivery..." class="flex-1 px-3.5 py-2 rounded-full text-xs bg-surface text-olive-dark border border-blush/60 focus:outline-none focus:ring-1 focus:ring-terracotta" />
+      <button onclick="sendChatMessage()" class="p-2 rounded-full bg-terracotta text-white shadow-xs">
+        <span class="material-symbols-outlined text-base">send</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- K) FLOATING WHATSAPP BUTTON (Bottom-Right on All Screens) -->
+  <div class="fixed bottom-6 right-4 sm:right-8 z-40">
+    <a href="https://wa.me/919999999999?text=Hello%20Decorara%20Concierge%2C%20I%20am%20exploring%20your%20curated%20hampers%20and%20home%20d%C3%A9cor!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-[0_8px_24px_rgba(37,211,102,0.35)] transition-all hover:scale-105" title="Chat with Decorara Concierge on WhatsApp">
+      <span class="material-symbols-outlined text-2xl fill-white">chat</span>
+      <span class="hidden md:inline font-sans text-xs sm:text-sm font-semibold tracking-wide">WhatsApp Inquiry</span>
+    </a>
+  </div>
+
+  <!-- INLINE JAVASCRIPT: DATA & INTERACTIONS -->
+  <script>
+    // 1. CONFIGURATION
+    const WHATSAPP_NUMBER = '919999999999';
+
+    // 2. CENTRAL PRODUCT DATA ARRAY
+    const HAMPERS = [
+      {
+        id: 'royal-diwali-hamper',
+        name: 'Royal Diwali Hamper',
+        category: 'Festive',
+        price: 3499,
+        originalPrice: 4200,
+        badge: 'Bestseller',
+        reviewsCount: 48,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0OVZeWJmb4u8WNBtAehQU-TVaDesNRv5ABSQDLqK87MmJqlxXHClE9i6lDhIyzCKCPgJI_q8M6QwTwWg302z6JocgGNlqTnkPs0jmAitvrqiZOuWO_97Vf3Q4aLWkhwyE1vQh11AtWj27NGmnbmOzoO_5s_oG8KDahTT3p-xPgulbSszHicJQ_dAfx3nhbYRJnBVODeQ22CBr3030flcSS3yRgEO5HgmDTrBNZScRVzXQvHyxLafRew',
+        description: 'Beaten brass diya, Kashmiri saffron honey, spiced macadamias & pure sandalwood incense.',
+        longDesc: 'Presented in a rigid midnight forest green velvet trunk with embossed antique gold crest. Includes a hand-beaten Moradabad brass diya, certified Kashmiri saffron raw honey (150g), slow-roasted spiced macadamias in a brass katori, and hand-rolled sandalwood dhoop sticks.',
+        tags: ['festive', 'traditional indian heritage', 'above ₹3,000', 'wedding']
+      },
+      {
+        id: 'botanical-spa-box',
+        name: 'Botanical Self-Care Spa Box',
+        category: 'Birthday',
+        price: 2199,
+        originalPrice: 2650,
+        badge: 'Organic Bath',
+        reviewsCount: 34,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDVL9i9Yco7mkPPJhrcqcYYyeImtZxFnTpUm0xZJxSvNqjHX3DqXTz9hHtbT4U6UT33AAWxrEadaeJAcbFrMNnV4NYMxouXsvNoETEXDlDqcsdBFh2LpH48moW1KKOYn79_Q_cbqNGhJVpm3pGbOaIAoOOIVQxZ3FygDbmpZOxKsdrFecJLgv5077-NsYVBY2PGg76c1etAmKTR9G68mvrLNfY4VKkLX8YqeadjKvAd_ILtc8Inn_JBHw',
+        description: 'Damask rose facial mist, neem massage comb, hand-pressed artisan soaps & linen washcloth.',
+        longDesc: 'Curated for tranquil unhurried evenings. Pure steam-distilled Kannauj rose water mist, hand-carved medicinal neem wood comb, twin cold-pressed moringa soaps, and pure linen washcloth in raw pine box.',
+        tags: ['birthday', 'mother', 'friend', 'earthy & eco-conscious', 'under-2500']
+      },
+      {
+        id: 'gourmet-brass-tea',
+        name: 'Gourmet Brass & Tea Keepsake',
+        category: 'Corporate',
+        price: 1850,
+        originalPrice: 2200,
+        badge: 'Heritage Tea',
+        reviewsCount: 27,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCJ-Z6vld1C5N-SDqsYXZNG2XmLkOjKgNuyghDkxlqciCoHPXw15mNgzF9odMb82e-pKlQ9KFZ3Poyi_AInSr9lVB4_f4m4ONcAoDVmHih7yAXM_dhi-wCcr3CxRk13UjvyYedSI7QZPL7T1SJEnls01Rf448QZ8Vk3Kvuh6h198loa7ZO7qiHpSOkkyXZVSYex1G5ECz_i2cnnrTcERYd4CWgBTX6JDWWyl32TXzvpfwISG-AXqRtiIg',
+        description: 'First-flush loose Darjeeling leaf, beaten brass infuser, twin stoneware cups & spiced jaggery.',
+        longDesc: 'An understated tribute to the morning tea ritual. Estate Darjeeling whole leaf sealed in an ivory & brass caddy, hand-hammered brass infuser spoon, two studio ceramic cups with gold rim, and spiced jaggery bites.',
+        tags: ['corporate', 'father', 'colleague', 'modern minimalist', 'under-2500']
+      },
+      {
+        id: 'wedding-truffle-box',
+        name: 'Wedding Welcome Truffle Box',
+        category: 'Wedding',
+        price: 2800,
+        originalPrice: 3200,
+        badge: 'Wedding Favours',
+        reviewsCount: 52,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDJAq8CzztXi8QjQwlMFbg39GiGm6fJ6FUQ6XJwBFkkjKmWmFr5RqMSNGgqqtWJYdeF5FLtw4qMgApG2Tn_LJ0ZqZkqammmOgVvnkympWgMxMo1shUkYyIiw9_wPzO5Z04JwFNJQ7WdrTVR-K4x7xA6DaQ9DXOffJfL2IcEVaDwaLr0vp_fzOvyTaSBcNXRr6IJAu7_I70s76pz72h6jT1P4jKSZxRIKNF87M42UQJOJit7nEzRAyIQJw',
+        description: 'Single-origin cacao truffles, white marble candle vessel & personalized calligraphed crest.',
+        longDesc: 'Nine pieces of single-origin dark chocolate ganache truffles, a miniature Makrana marble candle with jasmine soy wax, and personalized gold-foiled crest monogram.',
+        tags: ['wedding', 'couple', 'anniversary', 'modern minimalist']
+      },
+      {
+        id: 'terracotta-chai-set',
+        name: 'Artisanal Terracotta Chai Set',
+        category: 'Festive',
+        price: 950,
+        originalPrice: 1200,
+        badge: 'Pocket Luxury',
+        reviewsCount: 66,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuARrVKYtTMt-SpyWzXj2-eaYVCnzYt5T1MYoEiX9VRe4ujkoLHVQAaccgfHuV04iSmAK6mZTrdsx2ygE7cE2hEvCqkClc4VTbnU1Nd5g8L0PE7FZtwpwjJfrXLGWOOJQwzmZi4VD-9dU1VVGmDSjnhSjBIszjLA1yGaDVA5qvKFLcSgzTGtLDGWDl3GeJ8z1fxCo8m097LnLyOCcSDfgMDzbDv_MoN--Fdx8RaQd-tu6M1c5sskY5JrQQ',
+        description: 'Quad hand-thrown clay kulhars with small-batch stone-ground Malabar chai spice blend.',
+        longDesc: 'Four unglazed terracotta kulhars shaped on pottery wheels in Uttar Pradesh, paired with stone-ground whole spice masala blend in a corked glass vial.',
+        tags: ['festive', 'under-1000', 'earthy & eco-conscious', 'cozy chai enthusiast', 'friend']
+      },
+      {
+        id: 'luxury-oud-marble',
+        name: 'Luxury Oud & Makrana Marble',
+        category: 'Corporate',
+        price: 4200,
+        originalPrice: 4800,
+        badge: 'Collector Edition',
+        reviewsCount: 19,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCsATEKWER-cwWByuEVhjh1oke_tjH5vNY5YR8DdIHZ3t8X5rqULSLFV7FeGGGIV8T9KrFME01obWTpELu6FDLbBNcfg3PU3brqsc5bhZnMoYLr53Ky4q7ju2NB9xyzeylkOQxn-KbRFid-qBNVMwI0AzX-0-QDUVcGdnbfXfszcs_zPxxnX4In3VI7gLnxMoU0AyMh9S_Ni08tmBgBPYW0Tspcwvf-JbKm5fk5ooNmMY-EBMsS-guI0g',
+        description: 'Carved Makrana marble candle bowl, pure Assam wild oud oil & beaten brass wick trimmer.',
+        longDesc: 'Architectural opulence inside dark solid wood crate: hand-carved white marble candle bowl with three wooden wicks, 10ml Assam wild oud perfume elixir, and brass accessories.',
+        tags: ['corporate', 'above ₹3,000', 'opulent & fragrant', 'anniversary', 'couple']
+      },
+      {
+        id: 'mithai-floral-box',
+        name: 'Mithai & Heritage Floral Box',
+        category: 'Festive',
+        price: 1650,
+        originalPrice: 1999,
+        badge: 'Traditional',
+        reviewsCount: 31,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1xqx1Ln5Vkh5ALP3E-mJbWI18XBfCbhEQ4PXDAylQmBJ7VBs6NDV7m44cbtylnZ7FQ9pPSLqsWDUXa4hrtqWhRjhFdB55kU5nAKaBWHF04T4OU0pbKMxpY-p6UZ3StIYDPRsyq8c3NnLjp6ErdeX11q2BrQNoYbjevnrYXYbQkuqlW4Yyl1o_klwiNydH4RCKiRdMqfTmcSQotm6q3ZMHO5L5_uk5nupIzGZ4JHUBnt4W27zLMzTV3Q',
+        description: 'Gourmet pistachio bites, brass keepsake sweet tin, jasmine closet tablet & marigold tea.',
+        longDesc: 'Silver-leaf pistachio delights in an embossed brass tin, paired with botanical jasmine wardrobe soy wax tablet and marigold tisane.',
+        tags: ['festive', 'under-2500', 'traditional indian heritage', 'mother']
+      },
+      {
+        id: 'executive-desk-hamper',
+        name: 'Executive Leather & Brass Desk Hamper',
+        category: 'Corporate',
+        price: 2400,
+        originalPrice: 2850,
+        badge: 'Executive',
+        reviewsCount: 41,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBanfChJYOVjE43zP0I3vHHnUnZBXuuDaajGYF-lXAI3B6TUcOQbPuRfHPomICqfwwXhYtQxqY-Y1RLp7Yo86cH3iOfQT92fsGKvjHUZ01K2IppFhkZEGBtQSdSLCrzEWn_td6r6Z4cin8i_ayoaKbf35N_vddL1yhmXwH5OqZ8CW65NObB6kJWYifOwG9JeINC_CjYAibuSAFJetttQjW0ACZKjdowVQRKdNPXsjhNtlyNn9xqk7U2ig',
+        description: 'Full-grain vegan leather desk pad, turned brass pen holder & smoked bourbon soy wax candle.',
+        longDesc: 'Distinguished desk sanctuary: oversized saddle tan vegan leather pad, heavy solid brass pen holder, and amber glass soy candle.',
+        tags: ['corporate', 'father', 'colleague', 'modern minimalist', 'under-2500']
+      }
+    ];
+
+    const HOME_DECOR = [
+      {
+        id: 'hammered-brass-urli',
+        name: 'Hammered Brass Urli',
+        categoryKey: 'festive',
+        price: 2250,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAWcHKNzHkwT9ZqBWTkrWOKXYBhXr8gIzNuVE82RT_8d_W_JauofI2c4s7p20Smyc9jZCVf07nOOjd7ZNdyv4NmUE_FvG5jAQ66NyRaNpwbsxsaHm82KFsmKsVlJ9oVxdxRjYwKd2OMxeWWPaiMRd_q2yLOYckpXPJQZCghpFb46GBXX18OWaRHfwacbEs5iobyvxXsSJZDZhgYiibAhHvMWyeW5uU58H_0edRSrmt3YtEZ9RYGA6ryPQ',
+        craft: 'Moradabad Metal Guild',
+        region: 'Moradabad, UP',
+        shortDesc: 'Beaten heavy gauge brass bowl for floral arrangements.',
+        longDesc: 'Hand-hammered from pure heavy-gauge brass by metalsmiths in Moradabad. Ideal for floating fresh petals, marigolds, and floating wax diyas.'
+      },
+      {
+        id: 'terracotta-fluted-vase',
+        name: 'Terracotta Fluted Vase',
+        categoryKey: 'vases',
+        price: 1450,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBn7wStu5QADV6YeXXKi-rK0RxAvTjGPw_OdQU7o6xplnvibLKWjpGq89ZI3yBLPX6ymi3NhsC2LXAnXsyrJMCysenRMC-U8eNUNp9DOpza90LCvwlsQg11ZPTapKmFz5NxpVktepM0NnB6nfiGmiTGuSmrlvDn-J-GZu8npBxBarrAvraY2Tm6-gm49U0Vq2clBg-4dNEld07WTQwpDQnJS4kbu3ngXe6Pt9l7ZErpTNXAIRaGYyG5UQ',
+        craft: 'Khurja Studio Pottery',
+        region: 'Khurja, UP',
+        shortDesc: 'Unglazed architectural silhouette for dried flora.',
+        longDesc: 'Wheel-thrown natural red terracotta vessel with raw matte finish and hand-carved sculptural fluting fired in traditional kilns.'
+      },
+      {
+        id: 'makrana-marble-candle',
+        name: 'Makrana Marble 3-Wick Candle',
+        categoryKey: 'candles',
+        price: 1890,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDGoq6b8mi2Dj73AQAf94lVwb-QkgKVujz-D6CquClVWqMkYffSX4VqiLBU7sHVH3yuac5x4G9De1zogggKzadhF8kv9s12lrgXkcm4IQuJfH56MZj1iKDh4RfYvlfEZwJZ4WlkTLkw97d5cudpdfvglEQz9R-LHRd_aKUodWfN4VkSeoABX9eFy-qRl_osHn7SVfqPIidZUmxfvY8WZ1DyEG-N9HUGxESsVMXFkOOP0LayASjRQqCGmw',
+        craft: 'Makrana Stone Carvers',
+        region: 'Makrana, Rajasthan',
+        shortDesc: 'Vetiver & Jasmine botanical soy wax vessel.',
+        longDesc: 'Carved out of translucent white Makrana marble with crackling wooden wicks and essential oils.'
+      },
+      {
+        id: 'mughal-brass-coasters',
+        name: 'Mughal Brass Coasters (Set of 4)',
+        categoryKey: 'table',
+        price: 1150,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBoMBlq0BYPkWXp--K3DGoesgGA84IfKe1n4tlTX4Ph9ySXbhaEMQIEy0NTgyiNHoMyKoy2SekYnJgJCbAY2MAxI8Tns0s9inaifVJC4J3sz7n8FH18qnBiEKATliU2kQYxqe-fSW8xlWMmlgCSsI-YKWpKNuvTqcsdAuIv58v5VMVNOYrgeEiFN41uwYvWR-mLZNtxxbmUKTPgAzAVR7bDlcBDfTc2ZxIyJDk-CJcxGiaLHDtN-E4nJQ',
+        craft: 'Etched Metal Guild',
+        region: 'Jaipur, Rajasthan',
+        shortDesc: 'Heavy brass with protective velvet backing.',
+        longDesc: 'Four weighty solid cast brass coasters etched with fine Mughal floral motifs.'
+      },
+      {
+        id: 'sandalwood-reed-diffuser',
+        name: 'Kerala Sandalwood Reed Diffuser',
+        categoryKey: 'candles',
+        price: 1350,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC0PgZxj80WsMKyYD-TGghy55U8RsSUoo5j8nc1uZ7oxtQIqD2HO40qMwn1UlMOXX5s1eQRgvS0yrX5q4W8ta7XOtu65EHurO_Ac-jWE4aO1hgX_-ZZqDhJ2k8QWha8KXeIjbQA9ondQ7PW1FWV09yzJikObTQCn3XEwujRXimdLu69J98pYVaKGLJE7-BXqK16391jRoYXnIkuzEZzNblgettKvFMCPQmaP-wAFB0WhS6JaHMffTX79A',
+        craft: 'Natural Aromatics',
+        region: 'Kochi, Kerala',
+        shortDesc: '150ml amber vessel with natural rattan reeds.',
+        longDesc: 'Slow-evaporating aromatic room diffuser formulated with wild sandalwood and crushed cardamom oil.'
+      },
+      {
+        id: 'mayur-brass-diya-pair',
+        name: 'Mayur Brass Diya Pair',
+        categoryKey: 'festive',
+        price: 1600,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCpOqBiWucfIFsWY6nvmhqzxusLsJz6y1rogrmzIwF8fUueyUrZc-BKCXSiztvOHpNn8jNSjQvTXUZeS8blLY7PqUU11RXu0WpEhitr58wmqy4I0RvbNFBNt7DufjC7x_ls5BhZbMRl5DvfjJvlMDg161m7T_xO6inurhBu9Rxxc2LkxyLoCqdagx-DlhOJ_kBWdoxPSrSXSmNxxYafM3iqojL87qCng6UTCxam73iCImTh9Z1_9REDxw',
+        craft: 'Brass Heirloom Casting',
+        region: 'Swamimalai, Tamil Nadu',
+        shortDesc: 'Twin sculpted peacock oil lamps for sacred spaces.',
+        longDesc: 'Cast using the lost-wax technique in solid brass with deep oil wells.'
+      },
+      {
+        id: 'nizamabad-black-pottery',
+        name: 'Nizamabad Silver Inlay Bowl',
+        categoryKey: 'table',
+        price: 1950,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuANYY8uwKctJCHpnOcSFPDxj-FcFW8LawyfJ5JpV9xt84OZWXh8JE0J89iqcoMMB_HSeIap5wx5wn_hK9rVNAP9wmvHu9-PyOlBGPpZOCo_iHPyI9gK_4uamV1xxtX_B5Os8DKXqE8JQHOnf3Dm5YaqqXQ06wUQZ-Ks-eaPIwoNoOWxj6joEakbBktsXxbB_7UffacfB1nSu3F_f6f6ZPuD1NXumORWlGR8aFAoPMewMC1uUXFb_8WtnA',
+        craft: 'GI Tagged Black Clay',
+        region: 'Nizamabad, UP',
+        shortDesc: 'Smoked earthen bowl with silver floral inlay.',
+        longDesc: 'Distinctive smoked black clay bowl with engraved floral vines filled with genuine silver leaf.'
+      },
+      {
+        id: 'mango-wood-host-tray',
+        name: 'Mango Wood Host Serving Tray',
+        categoryKey: 'table',
+        price: 2100,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHRYavIqNZVWrUgAmvrJyv2qik0LF0Fv106Zoltk3G2uEDLhKEl3genlIzlJkoz7cc-FHHMyWCgsni0jd6OhIclY8Mjd3iEVRn7Qs1A9RSQAJEUvSjMspteNHiWdTJuiDt8AtjzZfWoNF_c0HfMQLgHRgw0AuMtuRKpVs2Bstu66vD61r1bXh6BquJ0B92msr5DSFK9jR8Pc6is14TbMP81WCC58QCFYORSWGPbfylN6t7FKu2EHbHAA',
+        craft: 'Saharanpur Wood Carving',
+        region: 'Saharanpur, UP',
+        shortDesc: 'Organic edge platter with solid brass handles.',
+        longDesc: 'Seasoned solid mango wood showing rich natural grain, raw bark edges, and cast brass handles.'
+      }
+    ];
+
+    // State Variables
+    let cart = [
+      { id: 'c1', title: 'Royal Diwali Hamper', price: 3499, category: 'Festive', quantity: 1, image: HAMPERS[0].image }
+    ];
+    let customBox = { name: 'Royal Emerald Velvet Box', price: 850 };
+    let customItems = [
+      { id: 's1', name: 'Brass Incense Diya', price: 490 },
+      { id: 's2', name: 'Kashmiri Saffron Honey', price: 620 },
+      { id: 's3', name: 'Pure Sandalwood Soy Candle', price: 550 }
+    ];
+    let aiStep = 1;
+    let aiAnswers = { recipient: '', occasion: '', budget: '', aesthetic: '' };
+
+    // Initial render on DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderOccasions();
+      renderHampers('all');
+      renderDecor('all');
+      renderAiWizard();
+      renderStudio();
+      renderReviews();
+      renderFaqs();
+      renderInstagram();
+      renderCart();
+    });
+
+    // NAVIGATION & GENERAL WHATSAPP
+    function openWhatsAppGeneral() {
+      const text = encodeURIComponent("Hello Decorara Concierge, I'm exploring gifts and home décor on your website and would love some assistance!");
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+
+    // OCCASIONS
+    function renderOccasions() {
+      const occasions = [
+        { name: 'Weddings', count: '42 Curations', tag: 'wedding', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDxBrEJRzoIPrmVZclM3n1kTKfI_oLTxlt_lYLMIM_arnz3ozJ2_s88SXW0FwN24IIuoypdxjOr1aWW41ir3La1P4pFtKq1u3H1rzT1IuavGcq6DlIp55P2o0yvV462UheP171jdulGOB5ZYzja0oLQpiofRAvNTHvtDSTQcKpuw15TKehmguUIW3q1J2P6DR8sW73kc8QcrtkT5b3VFqIops27ToUawnpmoGS90NlSWix9aNN6eZRIBw' },
+        { name: 'Festive & Diwali', count: '58 Curations', tag: 'festive', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDT_JXzJu2ohmeCCSsDtSIhINQTkoOAiNrDxljLZJvLA3WbHPRhqY7dEIw-DpHVPYoMM8cID4A4bnBB2BAS26rC8TzUWuq1W6ivnfz1I5p_ybpUUyByfeIuMjfb3hYn23LCZG3ujvgSMzH0MAwnjcQBsjpQgWRFA2-5FbzdkKCsskLXQfnyPuEvWu7aKE-tRxiTTNdYRgoC7gBYoX14HbxWpTC2EPoqrexc4VYzuJ3LUMr1DhxbMkaZnA' },
+        { name: 'Housewarming', count: '36 Curations', tag: 'housewarming', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHT-J2oXBiS9t1xIWIxoQvMfYjnOlD9-J1eB_Bz_GCxxOTwCsSV7UeDkXTI-pqMhaoiU07LQxyIjdUh_kxFENnEApDPcQyrj-tsn7t0MrzOsQgiF8FWLbwXHUK2hL4inMuqAbKWQe5FRhjqlXrRj-1ZxotY98E7WuOjJiYmLm2dy-DMEmhwMg-6h02wF7EBnbWJJbKVf_EzGn6Pz242_YdDpLBoDsacK7W_VicQvIpvJulmhv4wJO4Bg' },
+        { name: 'Anniversary', count: '24 Curations', tag: 'anniversary', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAT9K04N7yJu1iHKn2Abld5GNe-ngpIMQ9JuzSVpp-cg4oo1rA8xA5yzi9lnwh_SZQ14iMSuR6Paaz0IHqZ4u4kOS18CpckGJYQbWdf4vUvShzt9MVcqIm3NDLOvNiWWu3UgKFOnXhiLHyMHX_EajnLUVGCNOVKM2mYM2OX-EgLwmU-BHz1anevyGdmAwIxoOOho4dxOdM9plWbgybj2yMHL5n0J9psngK39wg02eYJLNiRN7TklX5JdQ' },
+        { name: 'Birthdays', count: '31 Curations', tag: 'birthday', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC7fcxzE2QEBtbWiB_w0tVtE72SqFIih7Oenqq9DbAvF_ZpzX6S6vRQgQDNBIhrPMTnriHr7ra72Yw-eDI7zr4N_GnQ-1T2YXDee_BTvsbwEj1mUiuvqNOY_nJd_Q4rjr9PUBjbRfecQjI87bbDDkM_208hHUKYGqVKdvCCNZ9eXSO6ZBBsyz4glNQeIRhWRl4ldke24DqxPsJBQ6yuMcIZJ82TDClo1rc9jhPwt1JgVfEhe8XskYTxEw' },
+        { name: 'Corporate', count: '50+ Curations', tag: 'corporate', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCqOOeN-KFe-QK6XGyUukn__YxXXPfH19mz2xoOEKETi1S41MFHWV413AghYyU4vn6oAkVDtMZi_W4cv9BgXj2R77ke8tf8klDLXyAScm9c_fyI16iOEoUk4T9bhpa2cETYzyucFZ6xd0VxX5FwrZsIZP1oxlUoDthZjV1nSXGDOWhP7RYRCoANTj-kUlgR4NzRG04y-Y40kbvLyl9rRWs4Fzh7SkkX3CSOCzWpYkYiQ8-Ry-9yypfQjw' }
+      ];
+
+      const container = document.getElementById('occasions-cards');
+      container.innerHTML = occasions.map(o => `
+        <div onclick="selectOccasionTag('${o.tag}')" class="group text-left cursor-pointer rounded-2xl bg-white p-2.5 sm:p-3 shadow-xs hover:shadow-lg transition-all flex flex-col gap-2 border border-blush/40">
+          <div class="w-full aspect-[4/5] rounded-xl overflow-hidden bg-[#EBE3DB] relative">
+            <img src="${o.img}" alt="${o.name}" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-olive-dark/20 group-hover:bg-olive-dark/0 transition-colors"></div>
+          </div>
+          <div class="px-1 pb-1">
+            <span class="font-serif text-base text-olive-dark group-hover:text-terracotta transition-colors block leading-snug">${o.name}</span>
+            <span class="text-xs text-olive/70 block mt-0.5">${o.count}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function selectOccasionTag(tag) {
+      renderHampers(tag);
+      document.getElementById('gift-hampers').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // HAMPERS GRID
+    function renderHampers(filter) {
+      const chips = [
+        { label: 'All Hampers', val: 'all' },
+        { label: 'Festive', val: 'festive' },
+        { label: 'Wedding', val: 'wedding' },
+        { label: 'Birthday', val: 'birthday' },
+        { label: 'Corporate', val: 'corporate' },
+        { label: 'Under ₹1,000', val: 'under-1000' },
+        { label: 'Under ₹2,500', val: 'under-2500' }
+      ];
+
+      const chipContainer = document.getElementById('hampers-filter-chips');
+      chipContainer.innerHTML = chips.map(c => `
+        <button onclick="renderHampers('${c.val}')" class="px-4 py-2 rounded-full text-xs sm:text-sm whitespace-nowrap transition-all ${
+          filter === c.val ? 'bg-olive-dark text-white font-medium shadow-sm' : 'bg-[#F5EFEB] text-olive/80 hover:bg-[#EBE3DB] border border-blush/40'
+        }">${c.label}</button>
+      `).join('');
+
+      const filtered = HAMPERS.filter(h => {
+        if (filter === 'all') return true;
+        if (filter === 'under-1000') return h.price <= 1000;
+        if (filter === 'under-2500') return h.price <= 2500;
+        return h.category.toLowerCase().includes(filter.toLowerCase()) || h.tags.some(t => t.includes(filter.toLowerCase()));
+      });
+
+      const grid = document.getElementById('hampers-grid');
+      grid.innerHTML = filtered.map(h => `
+        <div class="group bg-white rounded-2xl p-3.5 sm:p-4 shadow-xs hover:shadow-xl transition-all flex flex-col justify-between border border-blush/40">
+          <div>
+            <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-[#F5EFEB] mb-3">
+              <img src="${h.image}" alt="${h.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              ${h.badge ? `<span class="absolute top-3 left-3 bg-terracotta text-white px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider">${h.badge}</span>` : ''}
+              <button onclick="openQuickView('${h.name}', ${h.price}, '${h.longDesc.replace(/'/g, "\\'")}', '${h.image}', 'Artisanal Signature', 'Pan-India Atelier')" class="absolute inset-0 bg-olive-dark/35 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-xs gap-1.5 transition-opacity backdrop-blur-[2px]">
+                <span class="material-symbols-outlined text-sm">visibility</span>
+                <span>Quick View</span>
+              </button>
+            </div>
+            <div class="flex items-center gap-1 text-gold mb-1">
+              <span>★★★★★</span>
+              <span class="text-[11px] text-olive/70 ml-1">(${h.reviewsCount})</span>
+            </div>
+            <h3 class="font-serif text-lg sm:text-xl text-olive-dark group-hover:text-terracotta transition-colors leading-snug">${h.name}</h3>
+            <p class="text-xs text-olive/70 line-clamp-2 mt-1.5 leading-relaxed">${h.description}</p>
+          </div>
+          <div class="pt-4 flex flex-col gap-2.5 border-t border-[#F5EFEB] mt-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="font-serif text-xl sm:text-2xl text-olive-dark font-medium">₹${h.price.toLocaleString('en-IN')}</span>
+                ${h.originalPrice ? `<span class="text-xs text-olive/50 line-through">₹${h.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+              </div>
+              <span class="text-[11px] text-terracotta font-medium">Artisanal Wrap</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('${h.name}', ${h.price}, '${h.category}', '${h.image}')" class="px-3 py-2 rounded-xl bg-[#F5EFEB] hover:bg-[#EBE3DB] text-olive-dark text-xs font-medium flex items-center justify-center gap-1.5 border border-blush/40">
+                <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                <span>Cart</span>
+              </button>
+              <button onclick="orderHamperWhatsApp('${h.name}', ${h.price})" class="px-3 py-2 rounded-xl bg-terracotta hover:bg-terracotta-dark text-white text-xs font-medium flex items-center justify-center gap-1.5 shadow-xs">
+                <span class="material-symbols-outlined text-sm">chat</span>
+                <span>Order</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // HOME DÉCOR
+    function renderDecor(categoryKey) {
+      const tabs = [
+        { label: 'All Objects', key: 'all' },
+        { label: 'Candles & Diffusers', key: 'candles' },
+        { label: 'Vases & Planters', key: 'vases' },
+        { label: 'Table Décor', key: 'table' },
+        { label: 'Festive Urli & Diyas', key: 'festive' }
+      ];
+
+      const chipContainer = document.getElementById('decor-filter-chips');
+      chipContainer.innerHTML = tabs.map(t => `
+        <button onclick="renderDecor('${t.key}')" class="px-4 py-2 rounded-full text-xs sm:text-sm whitespace-nowrap transition-all ${
+          categoryKey === t.key ? 'bg-olive-dark text-white font-medium shadow-sm' : 'bg-white text-olive/80 hover:bg-[#EBE3DB] border border-blush/40'
+        }">${t.label}</button>
+      `).join('');
+
+      const filtered = HOME_DECOR.filter(d => categoryKey === 'all' || d.categoryKey === categoryKey);
+      const grid = document.getElementById('decor-grid');
+      grid.innerHTML = filtered.map(d => `
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 shadow-xs hover:shadow-xl transition-all flex flex-col justify-between border border-blush/40 group">
+          <div>
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-[#F5EFEB] mb-3">
+              <img src="${d.image}" alt="${d.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <button onclick="openQuickView('${d.name}', ${d.price}, '${d.longDesc.replace(/'/g, "\\'")}', '${d.image}', '${d.craft}', '${d.region}')" class="absolute inset-0 bg-olive-dark/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-xs gap-1.5 transition-all backdrop-blur-[2px]">
+                <span class="material-symbols-outlined text-sm">visibility</span>
+                <span>Quick View</span>
+              </button>
+            </div>
+            <div class="flex items-center justify-between text-[11px] mb-1">
+              <span class="font-semibold uppercase tracking-wider text-terracotta">${d.craft}</span>
+              <span class="text-olive/60">${d.region}</span>
+            </div>
+            <h3 class="font-serif text-lg sm:text-xl text-olive-dark group-hover:text-terracotta transition-colors leading-snug">${d.name}</h3>
+            <p class="text-xs text-olive/70 line-clamp-1 mt-1">${d.shortDesc}</p>
+          </div>
+          <div class="pt-4 flex items-center justify-between border-t border-[#F5EFEB] mt-3">
+            <span class="font-serif text-xl sm:text-2xl text-olive-dark">₹${d.price.toLocaleString('en-IN')}</span>
+            <div class="flex items-center gap-2">
+              <button onclick="addToCart('${d.name}', ${d.price}, 'Home Décor', '${d.image}')" class="p-2 rounded-xl bg-[#F5EFEB] hover:bg-[#EBE3DB] text-olive-dark border border-blush/40" title="Add to Cart">
+                <span class="material-symbols-outlined text-base">shopping_bag</span>
+              </button>
+              <button onclick="inquireDecorWhatsApp('${d.name}', ${d.price})" class="px-3.5 py-2 rounded-xl bg-terracotta hover:bg-terracotta-dark text-white text-xs font-medium flex items-center gap-1 shadow-xs">
+                <span>Inquire</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // AI GIFT FINDER
+    function renderAiWizard() {
+      const container = document.getElementById('ai-wizard-container');
+      const progress = document.getElementById('ai-progress-strip');
+
+      progress.innerHTML = [
+        { n: 1, label: 'Recipient' },
+        { n: 2, label: 'Occasion' },
+        { n: 3, label: 'Budget' },
+        { n: 4, label: 'Aesthetic' }
+      ].map((s, idx) => `
+        <div class="flex items-center gap-1.5">
+          <span class="w-7 h-7 rounded-full text-xs flex items-center justify-center font-bold ${
+            aiStep === s.n ? 'bg-terracotta text-white shadow-xs' : aiStep > s.n ? 'bg-olive-dark text-white' : 'bg-[#F5EFEB] text-olive/60'
+          }">${s.n}</span>
+          <span class="text-xs hidden sm:inline ${aiStep === s.n ? 'text-terracotta font-semibold' : 'text-olive/60'}">${s.label}</span>
+        </div>
+        ${idx < 3 ? '<span class="w-6 sm:w-10 h-[2px] bg-blush/50"></span>' : ''}
+      `).join('');
+
+      if (aiStep === 1) {
+        container.innerHTML = `
+          <div class="flex flex-col gap-6">
+            <h4 class="font-serif text-xl sm:text-2xl text-olive-dark text-center font-medium">Who are we celebrating today?</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
+              ${[
+                { l: 'Mother', v: 'Mother', icon: 'favorite' },
+                { l: 'Father', v: 'Father', icon: 'person' },
+                { l: 'Spouse / Partner', v: 'Spouse / Partner', icon: 'favorite' },
+                { l: 'Dear Friend', v: 'Friend', icon: 'sentiment_satisfied' },
+                { l: 'Colleague / Client', v: 'Colleague / Client', icon: 'handshake' },
+                { l: 'Newlywed Couple', v: 'Couple', icon: 'group' }
+              ].map(item => `
+                <button onclick="setAiRecipient('${item.v}')" class="p-4 rounded-2xl bg-surface hover:bg-[#F5EFEB] border border-blush/60 text-olive-dark flex flex-col items-center gap-2 transition-all hover:border-terracotta">
+                  <span class="material-symbols-outlined text-2xl text-terracotta">${item.icon}</span>
+                  <span class="text-sm font-medium">${item.l}</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      } else if (aiStep === 2) {
+        container.innerHTML = `
+          <div class="flex flex-col gap-6">
+            <h4 class="font-serif text-xl sm:text-2xl text-olive-dark text-center font-medium">What is the meaningful occasion?</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
+              ${[
+                { l: 'Housewarming', v: 'Housewarming', icon: 'cottage' },
+                { l: 'Wedding / Sangeet', v: 'Wedding', icon: 'celebration' },
+                { l: 'Diwali & Festive', v: 'Festive', icon: 'flare' },
+                { l: 'Birthday', v: 'Birthday', icon: 'cake' },
+                { l: 'Anniversary', v: 'Anniversary', icon: 'loyalty' },
+                { l: 'Gratitude / Corporate', v: 'Corporate', icon: 'card_giftcard' }
+              ].map(item => `
+                <button onclick="setAiOccasion('${item.v}')" class="p-4 rounded-2xl bg-surface hover:bg-[#F5EFEB] border border-blush/60 text-olive-dark flex flex-col items-center gap-2 transition-all hover:border-terracotta">
+                  <span class="material-symbols-outlined text-2xl text-terracotta">${item.icon}</span>
+                  <span class="text-sm font-medium">${item.l}</span>
+                </button>
+              `).join('')}
+            </div>
+            <button onclick="setAiStep(1)" class="text-xs text-olive/70 hover:text-olive-dark flex items-center gap-1">← Back</button>
+          </div>
+        `;
+      } else if (aiStep === 3) {
+        container.innerHTML = `
+          <div class="flex flex-col gap-6">
+            <h4 class="font-serif text-xl sm:text-2xl text-olive-dark text-center font-medium">What is your ideal budget range?</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+              ${[
+                { t: 'Under ₹1,500', s: 'Thoughtful Tokens & Crafts', v: 'Under ₹1,500' },
+                { t: '₹1,500 - ₹3,000', s: 'Artisanal Signatures', v: '₹1,500 - ₹3,000' },
+                { t: 'Above ₹3,000', s: 'Heirloom Luxury Trunks', v: 'Above ₹3,000' }
+              ].map(b => `
+                <button onclick="setAiBudget('${b.v}')" class="p-5 rounded-2xl bg-surface hover:bg-[#F5EFEB] border border-blush/60 text-olive-dark flex flex-col items-center text-center gap-1.5 transition-all hover:border-terracotta">
+                  <span class="font-serif text-xl text-terracotta">${b.t}</span>
+                  <span class="text-xs text-olive/70">${b.s}</span>
+                </button>
+              `).join('')}
+            </div>
+            <button onclick="setAiStep(2)" class="text-xs text-olive/70 hover:text-olive-dark flex items-center gap-1">← Back</button>
+          </div>
+        `;
+      } else if (aiStep === 4) {
+        container.innerHTML = `
+          <div class="flex flex-col gap-6">
+            <h4 class="font-serif text-xl sm:text-2xl text-olive-dark text-center font-medium">Which aesthetic describes them best?</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
+              ${[
+                { l: 'Traditional Heritage', v: 'Traditional Indian Heritage', icon: 'temple_hindu' },
+                { l: 'Modern Minimalist', v: 'Modern Minimalist', icon: 'dashboard_customize' },
+                { l: 'Eco & Earthy', v: 'Earthy & Eco-Conscious', icon: 'compost' },
+                { l: 'Opulent & Fragrant', v: 'Opulent & Fragrant', icon: 'diamond' },
+                { l: 'Culinary & Chai', v: 'Cozy Chai Enthusiast', icon: 'coffee' }
+              ].map(item => `
+                <button onclick="runAiFinder('${item.v}')" class="p-4 rounded-2xl bg-surface hover:bg-[#F5EFEB] border border-blush/60 text-olive-dark flex flex-col items-center gap-2 transition-all hover:border-terracotta">
+                  <span class="material-symbols-outlined text-2xl text-terracotta">${item.icon}</span>
+                  <span class="text-sm font-medium">${item.l}</span>
+                </button>
+              `).join('')}
+              <button onclick="runAiFinder('Traditional Indian Heritage')" class="p-4 rounded-2xl bg-terracotta text-white flex flex-col items-center justify-center gap-2 shadow-md">
+                <span class="material-symbols-outlined text-2xl text-gold-light">auto_awesome</span>
+                <span class="text-sm font-medium">Generate Matches</span>
+              </button>
+            </div>
+            <button onclick="setAiStep(3)" class="text-xs text-olive/70 hover:text-olive-dark flex items-center gap-1">← Back</button>
+          </div>
+        `;
+      }
+    }
+
+    function setAiRecipient(val) { aiAnswers.recipient = val; aiStep = 2; renderAiWizard(); }
+    function setAiOccasion(val) { aiAnswers.occasion = val; aiStep = 3; renderAiWizard(); }
+    function setAiBudget(val) { aiAnswers.budget = val; aiStep = 4; renderAiWizard(); }
+    function setAiStep(s) { aiStep = s; renderAiWizard(); }
+
+    function runAiFinder(aesthetic) {
+      aiAnswers.aesthetic = aesthetic;
+      const container = document.getElementById('ai-wizard-container');
+      container.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-12 gap-4 text-center">
+          <div class="w-14 h-14 rounded-full border-4 border-blush border-t-terracotta animate-spin"></div>
+          <div>
+            <h4 class="font-serif text-xl text-olive-dark">Decorara AI Stylist is harmonizing options...</h4>
+            <p class="text-xs sm:text-sm text-olive/70 mt-1">Analyzing artisan catalog and recipient nuances.</p>
+          </div>
+        </div>
+      `;
+
+      setTimeout(() => {
+        const matches = [HAMPERS[0], HAMPERS[1], HAMPERS[2]];
+        container.innerHTML = `
+          <div class="flex flex-col gap-6">
+            <div class="p-4 rounded-2xl bg-surface border border-blush flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-terracotta font-bold block">Curated Pairings For</span>
+                <p class="text-sm text-olive-dark font-semibold mt-0.5">${aiAnswers.recipient} • ${aiAnswers.occasion} • ${aiAnswers.budget} • ${aiAnswers.aesthetic}</p>
+              </div>
+              <button onclick="resetAiFinder()" class="text-xs font-semibold text-olive-dark hover:text-terracotta underline">Restart Finder</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              ${matches.map(m => `
+                <div class="bg-surface rounded-2xl p-4 border border-blush/70 flex flex-col justify-between">
+                  <div>
+                    <div class="w-full aspect-[4/5] rounded-xl overflow-hidden bg-[#EBE3DB] mb-3">
+                      <img src="${m.image}" alt="${m.name}" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="flex items-baseline justify-between mb-1">
+                      <h5 class="font-serif text-lg text-olive-dark font-normal">${m.name}</h5>
+                      <span class="font-serif text-lg font-medium text-olive-dark">₹${m.price.toLocaleString('en-IN')}</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white border border-blush/50 my-2.5">
+                      <span class="text-[10px] uppercase tracking-wider text-terracotta font-bold block">AI Rationale</span>
+                      <p class="text-xs text-olive/75 mt-1 leading-relaxed">${m.description}</p>
+                    </div>
+                  </div>
+                  <div class="pt-2 flex flex-col gap-2">
+                    <button onclick="addToCart('${m.name}', ${m.price}, '${m.category}', '${m.image}')" class="w-full py-2 rounded-xl bg-white text-olive-dark border border-blush/50 text-xs font-medium">Add to Cart</button>
+                    <button onclick="orderHamperWhatsApp('${m.name}', ${m.price})" class="w-full py-2 rounded-xl bg-terracotta text-white text-xs font-medium shadow-xs">Order on WhatsApp</button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }, 700);
+    }
+
+    function resetAiFinder() {
+      aiStep = 1;
+      aiAnswers = { recipient: '', occasion: '', budget: '', aesthetic: '' };
+      renderAiWizard();
+    }
+
+    // CUSTOM HAMPER STUDIO
+    function renderStudio() {
+      const boxes = [
+        { name: 'Pinewood Keepsake Trunk', price: 650, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBoHXXQkEujK4k50kaJOvmwp9pbOKOB7GZStHbPTGL_aNwigwqXyKBWjvRF7laCkNPzl_aqHoa3RmIuYbGmWf7I5AzySZhq3AfyyR2ykR3YyMOfRTgOC2PvfZxb4mz9A6aIrSgSTxJMsA3M7MHxd2NyDyd3qh3JYdPu9Epdt_AlHHjGo69EYIdNCaIocRkfE71VWJjaWXQxWIsDsRXMVOgQGPiVol-S8I14_PlPwxxS6aufPgtN7KjxrA' },
+        { name: 'Royal Emerald Velvet Box', price: 850, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuACKWmIq39r1C7ImYY7xQ93UQ26QZ7mmK9Py1WW_6njThzgmOrWrUwrmjhtDNaWLdeMtMzFHlEhuCTuMOC_PEBsxTV2fgnb4vTyIokpTK6Lg5hWISek5sjH1uxaPtgX6nTWAQ910-f7ARMtJrfaBaDccAdJPveDeXxfdwkhoTWTV0tHx2Iymjdoo74U_TLJGKuBGiSTY7eB3MTM8E57ix3TVgM18aK94lWDe5YYX1pzbfXxEcltJrQFIA' },
+        { name: 'Eco Handwoven Jute Basket', price: 450, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCdAeW3y-kD4wS1GbB7nO0UT7uiQE6LDuWcD233TwaFN8-H-CO0p6WniQgoqVv9iuCK06uXUzd1HzlP6pgNJa0VM62joH3iU70SqRgz4QpIjcIRt6y0Coxx8H0PsiLLnMsU2pqGAuLxGBDoF1O_jXzkioCNcn2MYi9raqnPnor3OhX7hkOHsKx-49upjxgEoykRhse5TPJH9gXSvTAPMUpmS7_CTw42hekyLXPOVpcs_IA__koxD3pzGg' }
+      ];
+
+      const boxesContainer = document.getElementById('studio-boxes-grid');
+      boxesContainer.innerHTML = boxes.map(b => `
+        <button onclick="selectStudioBox('${b.name}', ${b.price})" class="text-left p-3.5 rounded-2xl transition-all border ${
+          customBox.name === b.name ? 'bg-surface border-terracotta ring-2 ring-terracotta/40' : 'bg-[#F5EFEB] border-transparent hover:bg-[#EBE3DB]'
+        }">
+          <div class="w-full aspect-video rounded-xl overflow-hidden bg-[#EBE3DB] mb-2">
+            <img src="${b.img}" alt="${b.name}" class="w-full h-full object-cover" />
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs sm:text-sm font-semibold text-olive-dark">${b.name}</span>
+            <span class="font-serif text-sm text-terracotta font-medium">+₹${b.price}</span>
+          </div>
+        </button>
+      `).join('');
+
+      const treasures = [
+        { id: 's1', name: 'Brass Incense Diya', price: 490, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCjifReCv_Vbp5y9HrWO86t1zFirw3xKFQR3Z9oqkCKqSEfysgiugdi-MU8M37EQijqEXJdN8hxXAKhLdW7JfYgluA_o802Pc8udGb4XWGVC7iHxh7M_daWgvX--vzTuVKvkh1u63Yl99OvWnea2lpxt0YGVF79WIpc50C4iITBKBtWcVDR8-lpDG4ThP5Heu6B4bK6WKT3_DBQz5Pe0biJ6_c56nS6uRPo-g2rnIgB5xh0Y4N__qrBsg' },
+        { id: 's2', name: 'Kashmiri Saffron Honey', price: 620, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQAbiuYeFgRH8CjPTZHtpRTJXaA3TaUM8BhPRuKco6xuLK-UqfbkFLa1tWTYIDk6DyK6TDpG2XRtgqAd15HZzzz4FeS0GiQeRkUZbBJoq6tNDWj-B8fk8haFVTdNRftOCfQ2xHPaIkuc1v5Dfy0dYYxDN_H9uW0XK4SyOj4m0j7dKcgTEAjJ7-djX7uxHmXihhQCyuvqti0_zgHwKlErkAsXePfQPK-cqPU8GdpotpNnF2f2woe_Rm_g' },
+        { id: 's3', name: 'Pure Sandalwood Soy Candle', price: 550, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAY9tZxATrzFF5pRkY30yhf1SdPN113kB3PCT4yUSluVsT92iHreK7b1J_8WDGLsnXdTI1B04UymOxPGxKUBlh2aJbYwssoEy-XvLrwOTqJUGB_QoVM9-sBhkj6AYQA2C0Uf3L4lmRf-VgfRz89H9ZcCcty2YaEOXlz83KCJbtM8-SCv8tBevX6X6muK-8_hFoRjg2BIhwHdqOKVDzCIBepwHlUhuhwtXYS0MMFlXX3T5uIHj789sRAXQ' },
+        { id: 's4', name: 'Moringa & Shea Artisan Soap', price: 380, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBPphJfwDpi17dCI1BmrOo5tMq-Nf4qof5f8WHIq4w8SmB6KNzFKHLsVwV-To4O-X0ZbhWyef-WZjkQWfJJeB_uBUlFRUxgYvky1n1UGvREIOWS9BKEyfxJw50ZqdAeQD3GR58RmcoPn1W4Klc-PZ1RxHin8t00gSEud3ecxiodVKRR2sBdOFw9JKl9K3OvSz2gc9u2lqI2VE5uVa2dEMe1A_ysaIuCQlrh05pS-HxwrCsr3eiNvVrxlw' },
+        { id: 's5', name: 'First-Flush Darjeeling Tea', price: 450, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgNxeClZVq3VV5iPfPhS3FNRPS5TnmgahGXXyyUENMLmQJetcIi8-o5CYJIB3UollyL7RDV0j-qaWMRcD_Hx6JZcNJXpKrdKxy9ohw3mJN-B9YDbw0TxAIOJfdzmsX0nbiNnxSGazwWXsA5KvPtKADwE0MZsuwQY_Ar3vSlISMI6djPCmFvFIF8VA9faMEwM5K---Yk_nd6Xt67NDxoGAiZVMfNMN21NkukBv-cXlkB6ZtilADszOkdw' },
+        { id: 's6', name: 'Hand-thrown Clay Kulhar', price: 280, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCYI5ZrTEKhG8bhNoueFeubAqfun_KR1INSUR3yQfPO-KPpPycJOPhLJdwJufFKjeWNuhiSYX5HoBcFFn_kTGydeMGrhDT5eNvoixdygXsVd03MH4ANcNqS1SX_ZsBfCTpI8ZiU84ZQ5AecF0EYsUaCqKxDQLQJetB52WCn_nqEU2nhrvbJQqX_6J00vFDjqEZe1VrVtBBn9UVxn0Q4NZZ1t01n5TkUdp0StDBTh-XRAymiZ8VIyQCTGQ' }
+      ];
+
+      const treasuresContainer = document.getElementById('studio-treasures-grid');
+      treasuresContainer.innerHTML = treasures.map(t => {
+        const isSelected = customItems.some(i => i.id === t.id);
+        return `
+          <button onclick="toggleStudioItem('${t.id}', '${t.name}', ${t.price})" class="text-left p-3 rounded-2xl transition-all border ${
+            isSelected ? 'bg-surface border-terracotta ring-1 ring-terracotta/30' : 'bg-[#F5EFEB] border-transparent hover:bg-[#EBE3DB]'
+          }">
+            <div class="w-full aspect-square rounded-xl overflow-hidden bg-[#EBE3DB] mb-2.5">
+              <img src="${t.img}" alt="${t.name}" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs font-semibold text-olive-dark line-clamp-1">${t.name}</span>
+            <div class="flex items-center justify-between mt-1">
+              <span class="font-serif text-sm font-medium text-terracotta">₹${t.price}</span>
+              <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs ${
+                isSelected ? 'bg-terracotta text-white' : 'bg-white text-olive/50'
+              }">${isSelected ? '✓' : '+'}</span>
+            </div>
+          </button>
+        `;
+      }).join('');
+
+      updateStudioTray();
+    }
+
+    function selectStudioBox(name, price) {
+      customBox = { name, price };
+      renderStudio();
+    }
+
+    function toggleStudioItem(id, name, price) {
+      const idx = customItems.findIndex(i => i.id === id);
+      if (idx > -1) {
+        customItems.splice(idx, 1);
+      } else {
+        if (customItems.length >= 5) {
+          alert('Maximum 5 items allowed per box.');
+          return;
+        }
+        customItems.push({ id, name, price });
+      }
+      renderStudio();
+    }
+
+    function updateStudioTray() {
+      const itemsTotal = customItems.reduce((acc, c) => acc + c.price, 0);
+      const grandTotal = customBox.price + itemsTotal;
+
+      document.getElementById('studio-counter-label').textContent = `${customItems.length} of 5 selected (minimum 3)`;
+      document.getElementById('tray-box-title').textContent = customBox.name;
+      document.getElementById('tray-box-price').textContent = `₹${customBox.price}`;
+      document.getElementById('tray-box-subtotal').textContent = `₹${customBox.price}`;
+      document.getElementById('tray-item-count').textContent = customItems.length;
+      document.getElementById('tray-items-subtotal').textContent = `₹${itemsTotal}`;
+      document.getElementById('tray-grand-total').textContent = `₹${grandTotal.toLocaleString('en-IN')}`;
+
+      const listContainer = document.getElementById('tray-items-list');
+      if (customItems.length === 0) {
+        listContainer.innerHTML = '<p class="text-xs text-olive/50 italic py-2">No items selected.</p>';
+      } else {
+        listContainer.innerHTML = customItems.map(item => `
+          <div class="flex items-center justify-between text-xs py-1.5 border-b border-[#F5EFEB]">
+            <span class="text-olive-dark truncate pr-2 font-medium">${item.name}</span>
+            <span class="font-serif text-xs font-semibold text-olive-dark">₹${item.price}</span>
+          </div>
+        `).join('');
+      }
+    }
+
+    function updateCardPreview(val) {
+      const p = document.getElementById('studio-note-preview');
+      p.textContent = `"${val.trim() || 'Your personal gift sentiment...'}"`;
+    }
+
+    function sendCustomHamperWhatsApp() {
+      if (customItems.length < 3) {
+        alert('Please choose at least 3 curated items.');
+        return;
+      }
+      const itemsStr = customItems.map((item, idx) => `${idx + 1}. ${item.name} (₹${item.price})`).join('\n');
+      const note = document.getElementById('studio-note-input').value.trim() || 'None';
+      const grandTotal = customBox.price + customItems.reduce((acc, c) => acc + c.price, 0);
+
+      const message = encodeURIComponent(
+        `*Decorara Custom Hamper Request*\n\n` +
+        `*Base Box:* ${customBox.name} (₹${customBox.price})\n\n` +
+        `*Artisanal Items (${customItems.length}/5):*\n${itemsStr}\n\n` +
+        `*Handwritten Deckle Card:* "${note}"\n\n` +
+        `*Estimated Total:* ₹${grandTotal.toLocaleString('en-IN')}\n\n` +
+        `Hello Concierge, please verify stock and guide me through delivery!`
+      );
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+    }
+
+    // ORDER FORM
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const email = document.getElementById('form-email').value;
+      const occasion = document.getElementById('form-occasion').value;
+      const product = document.getElementById('form-product').value || 'Custom Gifting Consultation';
+      const qty = document.getElementById('form-qty').value || '1';
+      const budget = document.getElementById('form-budget').value || 'Flexible';
+      const date = document.getElementById('form-date').value || 'Earliest';
+      const address = document.getElementById('form-address').value || 'To be shared';
+      const msg = document.getElementById('form-message').value || 'None';
+
+      const text = encodeURIComponent(
+        `*New Milestone Order Inquiry - Decorara*\n\n` +
+        `*Client:* ${name} (${phone})\n` +
+        `*Email:* ${email || 'N/A'}\n` +
+        `*Occasion:* ${occasion}\n` +
+        `*Item:* ${product} (Qty: ${qty})\n` +
+        `*Budget:* ${budget}\n` +
+        `*Target Date:* ${date}\n` +
+        `*Address:* ${address}\n\n` +
+        `*Custom Card Note:* "${msg}"`
+      );
+
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+      alert('Thank you! Your order inquiry has been formatted and opened in WhatsApp.');
+    }
+
+    function orderHamperWhatsApp(name, price) {
+      const msg = encodeURIComponent(
+        `*Hamper Order Inquiry*\n\n` +
+        `*Product:* ${name}\n` +
+        `*Price:* ₹${price.toLocaleString('en-IN')}\n\n` +
+        `Hello Concierge, I would like to order or customize this hamper!`
+      );
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+    }
+
+    function inquireDecorWhatsApp(name, price) {
+      const msg = encodeURIComponent(
+        `*Home Décor Inquiry*\n\n` +
+        `*Item:* ${name}\n` +
+        `*Price:* ₹${price.toLocaleString('en-IN')}\n\n` +
+        `Hello Concierge, I would like to check availability and shipping timelines for this piece.`
+      );
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+    }
+
+    // CART
+    function toggleCart(open) {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-backdrop');
+      if (open) {
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    function addToCart(title, price, category, image) {
+      const existing = cart.find(i => i.title === title);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ id: Date.now().toString(), title, price, category, quantity: 1, image });
+      }
+      renderCart();
+      toggleCart(true);
+    }
+
+    function updateCartQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        item.quantity += delta;
+        if (item.quantity <= 0) {
+          cart = cart.filter(i => i.id !== id);
+        }
+      }
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items-container');
+      const badge = document.getElementById('cart-badge');
+      const subtotalEl = document.getElementById('cart-subtotal');
+
+      const count = cart.reduce((acc, i) => acc + i.quantity, 0);
+      badge.textContent = count;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-16 flex flex-col items-center gap-2">
+            <span class="material-symbols-outlined text-4xl text-olive/40">shopping_bag</span>
+            <p class="font-serif text-lg text-olive-dark">Your cart is empty</p>
+          </div>
+        `;
+        subtotalEl.textContent = '₹0';
+        return;
+      }
+
+      const subtotal = cart.reduce((acc, i) => acc + (i.price * i.quantity), 0);
+      subtotalEl.textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+
+      container.innerHTML = cart.map(item => `
+        <div class="p-3.5 rounded-2xl bg-surface border border-blush/50 flex gap-3.5 items-center justify-between">
+          <div class="flex-1 min-w-0">
+            <span class="text-[10px] uppercase tracking-wider text-terracotta font-semibold block">${item.category}</span>
+            <h5 class="font-serif text-sm font-medium text-olive-dark truncate">${item.title}</h5>
+            <span class="font-serif text-sm text-olive-dark font-semibold block mt-0.5">₹${item.price.toLocaleString('en-IN')}</span>
+          </div>
+          <div class="flex items-center gap-1.5 bg-white px-2 py-0.5 rounded-full border border-blush/50">
+            <button onclick="updateCartQty('${item.id}', -1)" class="text-xs px-1 text-olive-dark hover:text-terracotta">-</button>
+            <span class="text-xs font-semibold px-1">${item.quantity}</span>
+            <button onclick="updateCartQty('${item.id}', 1)" class="text-xs px-1 text-olive-dark hover:text-terracotta">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function checkoutCartViaWhatsApp() {
+      if (cart.length === 0) return;
+      const itemsStr = cart.map((i, idx) => `${idx + 1}. ${i.title} (${i.quantity}x) = ₹${(i.price * i.quantity).toLocaleString('en-IN')}`).join('\n');
+      const subtotal = cart.reduce((acc, i) => acc + (i.price * i.quantity), 0);
+
+      const msg = encodeURIComponent(
+        `*Decorara Order Inquiry*\n\n` +
+        `*Selected Items:*\n${itemsStr}\n\n` +
+        `*Subtotal:* ₹${subtotal.toLocaleString('en-IN')}\n\n` +
+        `Hello Concierge, please confirm availability and share payment link!`
+      );
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+    }
+
+    // QUICK VIEW
+    function openQuickView(title, price, desc, img, craft, region) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-price').textContent = `₹${price.toLocaleString('en-IN')}`;
+      document.getElementById('modal-desc').textContent = desc;
+      document.getElementById('modal-img').src = img;
+      document.getElementById('modal-craft').textContent = craft || 'Artisanal Piece';
+
+      document.getElementById('modal-add-btn').onclick = () => {
+        addToCart(title, price, 'Curated Item', img);
+        closeQuickView();
+      };
+      document.getElementById('modal-wa-btn').onclick = () => {
+        orderHamperWhatsApp(title, price);
+        closeQuickView();
+      };
+
+      const modal = document.getElementById('quick-view-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeQuickView() {
+      const modal = document.getElementById('quick-view-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // REVIEWS
+    function renderReviews() {
+      const reviews = [
+        { name: 'Aarav Kulkarni', role: 'VP Strategy', city: 'Mumbai', text: 'We ordered 85 Royal Diwali Hampers for our leadership team. The beaten brass diyas were museum quality. The WhatsApp concierge was remarkably prompt with our company monogram.' },
+        { name: 'Sunita Mehra', role: 'Interior Architect', city: 'New Delhi', text: 'The Custom Hamper Studio made finding a housewarming gift for my sister effortless. The calligraphed card with real dried botanicals had her teary-eyed when it arrived in Delhi.' },
+        { name: 'Nandini Patel', role: 'Wedding Planner', city: 'Jaipur', text: 'As a wedding planner, finding gifts that avoid looking cliché is hard. Decorara\'s Oud & Marble hampers set the standard for our VIP wedding welcome favors. Total perfection.' },
+        { name: 'Rohan Thomas', role: 'Tech Lead', city: 'Bengaluru', text: 'I tested the AI Gift Finder out of curiosity and was genuinely impressed. Selected the Chai gift set for my boss and it was delivered to Bangalore in 48 hours without a scratch.' }
+      ];
+
+      const container = document.getElementById('reviews-grid');
+      container.innerHTML = reviews.map(r => `
+        <div class="bg-white rounded-3xl p-6 shadow-xs border border-blush/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-gold mb-3">★★★★★</div>
+            <p class="text-xs sm:text-sm text-olive-dark leading-relaxed italic">"${r.text}"</p>
+          </div>
+          <div class="pt-5 border-t border-surface mt-4">
+            <span class="font-serif text-sm font-semibold text-olive-dark block">${r.name}</span>
+            <span class="text-[11px] text-olive/70">${r.role} • ${r.city}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // FAQS
+    function renderFaqs() {
+      const faqs = [
+        { q: 'What are standard delivery timelines across India?', a: 'Standard metro deliveries (Delhi NCR, Mumbai, Bengaluru, Chennai, Hyderabad, Kolkata) take 2 to 4 business days. Tier 2 and Tier 3 cities typically arrive in 4 to 6 business days. Express same-day courier dispatch is available in Bangalore upon WhatsApp request.' },
+        { q: 'Can I customize the items or add corporate branding?', a: 'Yes! For individual orders, use our Custom Hamper Studio or WhatsApp concierge to substitute items. For corporate or wedding orders (over 15 units), we provide custom foil-stamped logos, monogrammed brass plates, and branded ribbon sleeves.' },
+        { q: 'How are fragile terracotta and marble items protected?', a: 'We employ a 3-layer protective architecture: molded honeycomb paper cushioning, custom inner corrugated pockets, and external rigid transit crates. We maintain a 99.8% intact transit record and replace any breakage instantly with zero paperwork.' },
+        { q: 'What payment methods do you accept?', a: 'We accept all major Indian & International cards (Visa, MasterCard, Amex), UPI (Google Pay, PhonePe, Paytm), and direct Net Banking via encrypted Razorpay invoicing sent to your WhatsApp or email.' },
+        { q: 'Do you offer tiered discounts for wedding and bulk orders?', a: 'Yes. Orders above 25 units receive tiered institutional rates between 10% to 22% off catalog pricing, accompanied by dedicated sample mockups and coordinated drop-shipping to multiple recipient addresses.' },
+        { q: 'What is your cancellation and exchange policy?', a: 'Standard hamper orders can be cancelled or modified up to 24 hours prior to courier pickup. Personalized monogrammed boxes cannot be refunded once inscribed, but any transit defect is immediately re-dispatched.' }
+      ];
+
+      const container = document.getElementById('faq-accordion-container');
+      container.innerHTML = faqs.map((f, idx) => `
+        <div class="rounded-2xl bg-[#F5EFEB] border border-blush/50 overflow-hidden">
+          <button onclick="toggleFaqAccordion(${idx})" class="w-full p-4 sm:p-5 flex items-center justify-between text-left font-serif text-base sm:text-lg text-olive-dark hover:text-terracotta">
+            <span>${f.q}</span>
+            <span id="faq-icon-${idx}" class="text-terracotta text-lg">↓</span>
+          </button>
+          <div id="faq-ans-${idx}" class="hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-olive/80 leading-relaxed border-t border-blush/30 pt-3">
+            ${f.a}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleFaqAccordion(idx) {
+      const ans = document.getElementById(`faq-ans-${idx}`);
+      const icon = document.getElementById(`faq-icon-${idx}`);
+      const isHidden = ans.classList.contains('hidden');
+      ans.classList.toggle('hidden');
+      icon.textContent = isHidden ? '↑' : '↓';
+    }
+
+    // INSTAGRAM
+    function renderInstagram() {
+      const posts = [
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuAMrEyCu3RlUwpSLOMwOS5rNHl3ZZC2ZvKZ_zix7n6bPI2z3BcnROeztIBfmX4mRw75rFT8Xy1Md57zHDJvdXvrAynv3Rad30quNqtv8UFSRn5PqZElU8HQh6lV2s9QTritD20ZliMa0pyFI7YT2YDH42bfVPGNyQ5_S3ctc6yslIxpFong9HK4lNTbRmO1Cgy6mQLVEsA4ahHUoxWdQJqWvHOwRlYzG4CtOcSywZjAe9ZrvCmEt-2PQw',
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuCLQLfmifX_I2pEZPU89QTut8tZjmsYuUiHCYUCnOfjVbcjW2gPyljEPHq5ulhZS-rBh9nz9vrtyCPdY2q7GLY87hgY_9A-3VE9eSIVDRSLvw79rI3hCVdj-Aelu0u_c4hv3j0cOf0fa9cEP8yn415reQVWX8YhRjlQf1H8kcKuh2ETyOxQLJsnLugX7r3KZq5BOlFLtqgx4DTSY9dSNd6a9uXNlAfem7r1G2pWbp35k3GjIltm6ihIOA',
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuBBA-333r2fb7k74pHCZLNmWpFRshUlQ5ha-2C5Wq1G1FlPill_tRv08TbD-8odLqBIT_9Xkc1G7q5gU2gFEhV8-UCBkmwZhgQCgAnaeHxf1BotI-XiTwFNIbQplB7l89SQHB-kVhApOLS7Nmq3fCYNE_4eRsmAj4w0Xf4jzu0Iy_IQzKmCWOCHJ32jItGGRefL7Gd2aJJ6tcOhrzxNA7Fo2UEsppUdE-vAH7AC0gdl0bUaohZpuhDwJA',
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuDAV5h3kutiad-Yo-AZPWilODVqLUUD2z0eoyjsXdfDnlnYZXYaYutmdy4iP8YMGBi7kzQQce_1tyQrb0TrB2T52mY3X1fCm6gJGGFmf-qNAkNSIgJOwsMzpMZjTG73tCLzSFq1-GfMNJfVshJ12KpZguu8VfQwfJx2Dtn2Cc9MnvHAL_NEUfBOvQ_-j3Ncn653lSS4sxMHm2Iy70DfsWpN-vVFx-75ofwHhBEyH3acDTu_ie7zI5tULw',
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuAnMjXZhYhgCpcKIlahwwCejqmjPFxKhk-dpW7sWeBFRn23hjQzn8OSdz1N9QQihBK57_o_EeGxo4mdjKjJq-q0x7zTR-TVTaXRd0f8XVkdEUZJwjiRVPttnoorx5mxJVpdwQ1Tcj3r_21dnCkm2QarGlciGl5ujyDXY3srgm-ZxEIUyN4mP3aFjoTKfZjqhcdivZWmS13u6fCxSp24SD2-qZn1br5YDRo5Vp7qquDe4vlXCgMqEyPdNQ',
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuC8F2BbHjfTBX39vQeU8TmDvv-dc0XnfsRxDiiNYGGqj7oY_AJhVPLcooe6-dnRd1KlP-agrE6dthbsm0lgrZWSqmapFO6tYpU8abj21oq2X1MWOWAE5_cW4qc_8eoW3sB7eoBxBwgfo1wBav1d0nD3aHdMHbK_kYxOH7ODgBabvMxGZOvc0MOjk3sBQr8j2odPRkieiV38h6kkn-sUmwhW8SgN7nrt9LWNnhhSFPYqW75k8kjyiTg9Yw'
+      ];
+
+      const container = document.getElementById('instagram-grid');
+      container.innerHTML = posts.map(img => `
+        <div class="aspect-square rounded-2xl overflow-hidden relative group cursor-pointer bg-[#EBE3DB] border border-blush/40 shadow-xs">
+          <img src="${img}" alt="Decorara Aesthetic" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-olive-dark/45 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white transition-opacity">
+            <span class="material-symbols-outlined text-2xl">favorite</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // AI CHAT FLOATING WIDGET
+    function toggleChat(open) {
+      const panel = document.getElementById('chat-panel');
+      const btn = document.getElementById('chat-bubble-btn');
+      if (open) {
+        panel.classList.remove('hidden');
+        panel.classList.add('flex');
+        btn.classList.add('hidden');
+      } else {
+        panel.classList.add('hidden');
+        panel.classList.remove('flex');
+        btn.classList.remove('hidden');
+      }
+    }
+
+    function sendChatMessage(preset) {
+      const input = document.getElementById('chat-input');
+      const text = preset || input.value.trim();
+      if (!text) return;
+      if (!preset) input.value = '';
+
+      const container = document.getElementById('chat-messages');
+      container.innerHTML += `
+        <div class="p-3 rounded-2xl rounded-tr-none bg-terracotta text-white self-end max-w-[85%]">
+          ${text}
+        </div>
+      `;
+      container.scrollTop = container.scrollHeight;
+
+      setTimeout(() => {
+        const lower = text.toLowerCase();
+        let reply = "Our head gifting concierge is available to curate custom options! Would you like to review our Royal Diwali Hamper or build a custom box?";
+
+        if (lower.includes('delivery') || lower.includes('time')) {
+          reply = "We dispatch Pan-India via insured couriers. Metro cities arrive in 2-4 business days. Same-day express dispatch is available in Bengaluru and Delhi NCR.";
+        } else if (lower.includes('custom') || lower.includes('box')) {
+          reply = "Yes! You can choose your base box (pinewood trunk, emerald velvet, or jute) and handpick 3-5 artisanal treasures in our Custom Hamper Studio above.";
+        } else if (lower.includes('human') || lower.includes('talk') || lower.includes('whatsapp')) {
+          reply = "Connecting you to our human stylist! Opening WhatsApp now...";
+          openWhatsAppGeneral();
+        }
+
+        container.innerHTML += `
+          <div class="p-3 rounded-2xl rounded-tl-none bg-white text-olive-dark self-start max-w-[85%] border border-blush/50 shadow-2xs">
+            ${reply}
+          </div>
+        `;
+        container.scrollTop = container.scrollHeight;
+      }, 400);
+    }
+  </script>
+</body>
+</html>
